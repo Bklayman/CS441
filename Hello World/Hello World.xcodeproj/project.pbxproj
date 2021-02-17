@@ -16,6 +16,8 @@
 		4FAF19E025DAC38E00E48242 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF19DF25DAC38E00E48242 /* main.m */; };
 		4FAF19EA25DAC38E00E48242 /* Hello_WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF19E925DAC38E00E48242 /* Hello_WorldTests.m */; };
 		4FAF19F525DAC38E00E48242 /* Hello_WorldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF19F425DAC38E00E48242 /* Hello_WorldUITests.m */; };
+		4FE495AE25DD74C700228CEE /* hello.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4FE495AD25DD74C700228CEE /* hello.jpeg */; };
+		4FE495B925DD765300228CEE /* world.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4FE495B825DD765300228CEE /* world.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		4FAF19F025DAC38E00E48242 /* Hello WorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello WorldUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAF19F425DAC38E00E48242 /* Hello_WorldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_WorldUITests.m; sourceTree = "<group>"; };
 		4FAF19F625DAC38E00E48242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE495AD25DD74C700228CEE /* hello.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hello.jpeg; path = ../../../../../../../../Downloads/hello.jpeg; sourceTree = "<group>"; };
+		4FE495B825DD765300228CEE /* world.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world.jpeg; path = ../../../../../../../../Downloads/world.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +114,9 @@
 				4FAF19D125DAC38D00E48242 /* SceneDelegate.m */,
 				4FAF19D325DAC38D00E48242 /* ViewController.h */,
 				4FAF19D425DAC38D00E48242 /* ViewController.m */,
+				4FE495AD25DD74C700228CEE /* hello.jpeg */,
 				4FAF19D625DAC38D00E48242 /* Main.storyboard */,
+				4FE495B825DD765300228CEE /* world.jpeg */,
 				4FAF19D925DAC38E00E48242 /* Assets.xcassets */,
 				4FAF19DB25DAC38E00E48242 /* LaunchScreen.storyboard */,
 				4FAF19DE25DAC38E00E48242 /* Info.plist */,
@@ -239,8 +245,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE495B925DD765300228CEE /* world.jpeg in Resources */,
 				4FAF19DD25DAC38E00E48242 /* LaunchScreen.storyboard in Resources */,
 				4FAF19DA25DAC38E00E48242 /* Assets.xcassets in Resources */,
+				4FE495AE25DD74C700228CEE /* hello.jpeg in Resources */,
 				4FAF19D825DAC38D00E48242 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

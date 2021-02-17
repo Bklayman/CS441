@@ -64,4 +64,49 @@
     [myLabel setText:@"Helo Byd"];
 }
 
+- (IBAction) blackButtonClicked:(id)sender
+{
+    myLabel.textColor = [UIColor blackColor];
+}
+
+- (IBAction) blueButtonClicked:(id)sender
+{
+    myLabel.textColor = [UIColor blueColor];
+}
+
+- (IBAction) redButtonClicked:(id)sender
+{
+    myLabel.textColor = [UIColor redColor];
+}
+
+- (IBAction) greenButtonClicked:(id)sender
+{
+    myLabel.textColor = [UIColor greenColor];
+}
+
+- (IBAction) pinkButtonClicked:(id)sender
+{
+    myLabel.textColor = [UIColor systemPinkColor];
+}
+
+- (IBAction) brownButtonClicked:(id)sender
+{
+    myLabel.textColor = [UIColor brownColor];
+}
+
+- (IBAction) purpleButtonClicked:(id)sender
+{
+    myLabel.textColor = [UIColor purpleColor];
+}
+
+- (IBAction) yellowButtonClicked:(id)sender
+{
+    myLabel.textColor = [UIColor yellowColor];
+}
+
+- (IBAction) orangeButtonClicked:(id)sender
+{
+    myLabel.textColor = [UIColor orangeColor];
+}
+
 @end
