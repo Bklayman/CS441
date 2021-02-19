@@ -109,4 +109,12 @@
     myLabel.textColor = [UIColor orangeColor];
 }
 
+- (IBAction) surpriseButtonClicked:(id)sender
+{
+    [myLabel setText:@"Bleep Blorp"];
+    _personImage.image = [UIImage imageNamed:@"Alien.png"];
+    _planetImage.image = [UIImage imageNamed:@"Mars.jpeg"];
+    myLabel.textColor = [UIColor greenColor];
+}
+
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F37D7E725E0169F00848A33 /* Alien.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F37D7E625E0169F00848A33 /* Alien.png */; };
+		4F37D7EC25E017C000848A33 /* Mars.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4F37D7EB25E017C000848A33 /* Mars.jpeg */; };
 		4FAF19CF25DAC38D00E48242 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF19CE25DAC38D00E48242 /* AppDelegate.m */; };
 		4FAF19D225DAC38D00E48242 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF19D125DAC38D00E48242 /* SceneDelegate.m */; };
 		4FAF19D525DAC38D00E48242 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF19D425DAC38D00E48242 /* ViewController.m */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F37D7E625E0169F00848A33 /* Alien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Alien.png; path = ../../../../../../../../Downloads/Alien.png; sourceTree = "<group>"; };
+		4F37D7EB25E017C000848A33 /* Mars.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Mars.jpeg; path = ../../../../../../../../Downloads/Mars.jpeg; sourceTree = "<group>"; };
 		4FAF19CA25DAC38D00E48242 /* Hello World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAF19CD25DAC38D00E48242 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FAF19CE25DAC38D00E48242 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				4FAF19D325DAC38D00E48242 /* ViewController.h */,
 				4FAF19D425DAC38D00E48242 /* ViewController.m */,
 				4FE495AD25DD74C700228CEE /* hello.jpeg */,
+				4F37D7E625E0169F00848A33 /* Alien.png */,
+				4F37D7EB25E017C000848A33 /* Mars.jpeg */,
 				4FAF19D625DAC38D00E48242 /* Main.storyboard */,
 				4FE495B825DD765300228CEE /* world.jpeg */,
 				4FAF19D925DAC38E00E48242 /* Assets.xcassets */,
@@ -248,8 +254,10 @@
 				4FE495B925DD765300228CEE /* world.jpeg in Resources */,
 				4FAF19DD25DAC38E00E48242 /* LaunchScreen.storyboard in Resources */,
 				4FAF19DA25DAC38E00E48242 /* Assets.xcassets in Resources */,
+				4F37D7E725E0169F00848A33 /* Alien.png in Resources */,
 				4FE495AE25DD74C700228CEE /* hello.jpeg in Resources */,
 				4FAF19D825DAC38D00E48242 /* Main.storyboard in Resources */,
+				4F37D7EC25E017C000848A33 /* Mars.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

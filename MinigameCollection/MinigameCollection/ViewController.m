@@ -15,7 +15,7 @@
 
 - (void)playHangman:(NSArray*)hangmanWordsArray {
     int chosenWordIndex = arc4random_uniform(10000);
-    NSString* chosenWord = hangmanWordsArray[chosenWordIndex]; //Played guesses this word
+    NSString* chosenWord = hangmanWordsArray[chosenWordIndex]; //Player guesses this word
     
 }
 

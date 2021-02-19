@@ -208,6 +208,15 @@
                                     <action selector="orangeButtonClicked:" destination="BYZ-38-t0r" eventType="touchDragInside" id="dPi-e0-d3R"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHZ-1V-RPB">
+                                <rect key="frame" x="147" y="733" width="80" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Surprise"/>
+                                <connections>
+                                    <action selector="surpriseButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U0C-Za-GXP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -215,6 +224,8 @@
                     <size key="freeformSize" width="374" height="860"/>
                     <connections>
                         <outlet property="myLabel" destination="Swm-TO-kEG" id="HmA-6J-GZF"/>
+                        <outlet property="personImage" destination="kzu-hP-jsZ" id="X1A-oF-qlh"/>
+                        <outlet property="planetImage" destination="z07-PA-oF7" id="uX4-sL-bLf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

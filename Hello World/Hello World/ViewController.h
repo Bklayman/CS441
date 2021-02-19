@@ -9,6 +9,9 @@
 
 @interface ViewController : UIViewController
 @property (nonatomic, strong) IBOutlet UILabel *myLabel;
+@property (nonatomic, strong) IBOutlet UIImageView *personImage;
+@property (nonatomic, strong) IBOutlet UIImageView *planetImage;
+
 
 @end
 
