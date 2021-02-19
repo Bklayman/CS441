@@ -13,18 +13,106 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="388" height="860"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="hangmanBase (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="6aE-Ln-qgi">
                                 <rect key="frame" x="24" y="16" width="341" height="489"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="yOe-sn-ZcJ">
+                                <rect key="frame" x="16" y="549" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="DYS-Gm-bfC">
+                                <rect key="frame" x="61" y="549" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="Evx-kP-oBz">
+                                <rect key="frame" x="106" y="549" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="d0K-WI-8fC">
+                                <rect key="frame" x="151" y="549" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="8E3-5I-jJl">
+                                <rect key="frame" x="196" y="549" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="i9R-uv-Gse">
+                                <rect key="frame" x="241" y="549" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="6JS-XM-D0R">
+                                <rect key="frame" x="286" y="549" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="caY-Er-eyh">
+                                <rect key="frame" x="16" y="617" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="5YJ-ls-q0p">
+                                <rect key="frame" x="61" y="617" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="z1p-tb-buA">
+                                <rect key="frame" x="106" y="617" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="jJQ-0g-JKP">
+                                <rect key="frame" x="151" y="617" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="zH8-HE-ZYu">
+                                <rect key="frame" x="196" y="617" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="VJa-t4-UAr">
+                                <rect key="frame" x="241" y="617" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="6um-Tz-va1">
+                                <rect key="frame" x="286" y="617" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="o7m-UD-j4K">
+                                <rect key="frame" x="1" y="685" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="hVh-aB-nKL">
+                                <rect key="frame" x="46" y="685" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="JyT-ld-7ce">
+                                <rect key="frame" x="91" y="685" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="qYI-N5-E8d">
+                                <rect key="frame" x="136" y="685" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="C57-EM-U15">
+                                <rect key="frame" x="181" y="685" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="4HM-jZ-jkM">
+                                <rect key="frame" x="226" y="685" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Y-kT-iXV">
+                                <rect key="frame" x="271" y="685" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="GQW-iT-gvb">
+                                <rect key="frame" x="316" y="685" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <size key="freeformSize" width="388" height="860"/>
+                    <size key="freeformSize" width="375" height="860"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,6 +120,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dash.png" width="200" height="200"/>
         <image name="hangmanBase (1).png" width="122" height="191"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

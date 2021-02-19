@@ -13,14 +13,22 @@
 
 @implementation ViewController
 
+- (void)playHangman:(NSArray*)hangmanWordsArray {
+    int chosenWordIndex = arc4random_uniform(10000);
+    NSString* chosenWord = hangmanWordsArray[chosenWordIndex]; //Played guesses this word
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSString* hangmanWordListPath = [[NSBundle mainBundle] pathForResource:@"wordlist" ofType:@"txt"];
-    NSMutableArray *hangmanWordsArray = [NSMutableArray array];
-    for(int i = 0; i < 10000; i++){
-        //TODO Add words to hangmanWordsArray
-    }
+    NSString* loadedWord = [NSString stringWithContentsOfFile:hangmanWordListPath               encoding:NSUTF8StringEncoding
+        error:NULL];
+    NSArray* hangmanWordsArray = [loadedWord componentsSeparatedByString:@"\n"];
+    
+    //TODO Main Menu for Choosing which Game to Play
+    [self playHangman:hangmanWordsArray];
 }
 
 
