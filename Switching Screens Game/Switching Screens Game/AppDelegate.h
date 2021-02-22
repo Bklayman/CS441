@@ -1,0 +1,14 @@
+//
+//  AppDelegate.h
+//  Switching Screens Game
+//
+//  Created by Brendan Klayman on 2/22/21.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+
+@end
+

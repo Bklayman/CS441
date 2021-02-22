@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F63A54025E40873005BC8D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A53F25E40873005BC8D6 /* AppDelegate.m */; };
+		4F63A54325E40873005BC8D6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A54225E40873005BC8D6 /* SceneDelegate.m */; };
+		4F63A54625E40873005BC8D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A54525E40873005BC8D6 /* ViewController.m */; };
+		4F63A54925E40873005BC8D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A54725E40873005BC8D6 /* Main.storyboard */; };
+		4F63A54B25E40874005BC8D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A54A25E40874005BC8D6 /* Assets.xcassets */; };
+		4F63A54E25E40874005BC8D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A54C25E40874005BC8D6 /* LaunchScreen.storyboard */; };
+		4F63A55125E40874005BC8D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A55025E40874005BC8D6 /* main.m */; };
+		4F63A55B25E40874005BC8D6 /* Switching_Screens_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A55A25E40874005BC8D6 /* Switching_Screens_GameTests.m */; };
+		4F63A56625E40874005BC8D6 /* Switching_Screens_GameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A56525E40874005BC8D6 /* Switching_Screens_GameUITests.m */; };
+		4F63A57725E40E2A005BC8D6 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A57625E40E2A005BC8D6 /* 1.jpeg */; };
+		4F63A57C25E40E30005BC8D6 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A57B25E40E30005BC8D6 /* 2.png */; };
+		4F63A58125E40E35005BC8D6 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A58025E40E35005BC8D6 /* 3.jpeg */; };
+		4F63A58625E40E39005BC8D6 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A58525E40E39005BC8D6 /* 4.png */; };
+		4F63A58B25E40E3F005BC8D6 /* 5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A58A25E40E3F005BC8D6 /* 5.jpeg */; };
+		4F63A59125E40E48005BC8D6 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A59025E40E48005BC8D6 /* 7.png */; };
+		4F63A59625E40E4C005BC8D6 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A59525E40E4C005BC8D6 /* 8.png */; };
+		4F63A59B25E40E52005BC8D6 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A59A25E40E52005BC8D6 /* 9.png */; };
+		4F63A5A025E40E60005BC8D6 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A59F25E40E60005BC8D6 /* 6.png */; };
+		4F63A5A825E410BB005BC8D6 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A5A725E410BB005BC8D6 /* ViewController2.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F63A55725E40874005BC8D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F63A53325E40873005BC8D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F63A53A25E40873005BC8D6;
+			remoteInfo = "Switching Screens Game";
+		};
+		4F63A56225E40874005BC8D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F63A53325E40873005BC8D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F63A53A25E40873005BC8D6;
+			remoteInfo = "Switching Screens Game";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F63A53B25E40873005BC8D6 /* Switching Screens Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Switching Screens Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F63A53E25E40873005BC8D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F63A53F25E40873005BC8D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F63A54125E40873005BC8D6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		4F63A54225E40873005BC8D6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		4F63A54425E40873005BC8D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4F63A54525E40873005BC8D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4F63A54825E40873005BC8D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F63A54A25E40874005BC8D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F63A54D25E40874005BC8D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F63A54F25E40874005BC8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F63A55025E40874005BC8D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F63A55625E40874005BC8D6 /* Switching Screens GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Switching Screens GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F63A55A25E40874005BC8D6 /* Switching_Screens_GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Switching_Screens_GameTests.m; sourceTree = "<group>"; };
+		4F63A55C25E40874005BC8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F63A56125E40874005BC8D6 /* Switching Screens GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Switching Screens GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F63A56525E40874005BC8D6 /* Switching_Screens_GameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Switching_Screens_GameUITests.m; sourceTree = "<group>"; };
+		4F63A56725E40874005BC8D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F63A57625E40E2A005BC8D6 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpeg; path = ../../../../../../../../Downloads/1.jpeg; sourceTree = "<group>"; };
+		4F63A57B25E40E30005BC8D6 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = ../../../../../../../../Downloads/2.png; sourceTree = "<group>"; };
+		4F63A58025E40E35005BC8D6 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpeg; path = ../../../../../../../../Downloads/3.jpeg; sourceTree = "<group>"; };
+		4F63A58525E40E39005BC8D6 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.png; path = ../../../../../../../../Downloads/4.png; sourceTree = "<group>"; };
+		4F63A58A25E40E3F005BC8D6 /* 5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 5.jpeg; path = ../../../../../../../../Downloads/5.jpeg; sourceTree = "<group>"; };
+		4F63A59025E40E48005BC8D6 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 7.png; path = ../../../../../../../../Downloads/7.png; sourceTree = "<group>"; };
+		4F63A59525E40E4C005BC8D6 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8.png; path = ../../../../../../../../Downloads/8.png; sourceTree = "<group>"; };
+		4F63A59A25E40E52005BC8D6 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 9.png; path = ../../../../../../../../Downloads/9.png; sourceTree = "<group>"; };
+		4F63A59F25E40E60005BC8D6 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 6.png; path = ../../../../../../../../Downloads/6.png; sourceTree = "<group>"; };
+		4F63A5A725E410BB005BC8D6 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		4F63A5AC25E410DC005BC8D6 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F63A53825E40873005BC8D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F63A55325E40874005BC8D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F63A55E25E40874005BC8D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F63A53225E40873005BC8D6 = {
+			isa = PBXGroup;
+			children = (
+				4F63A53D25E40873005BC8D6 /* Switching Screens Game */,
+				4F63A55925E40874005BC8D6 /* Switching Screens GameTests */,
+				4F63A56425E40874005BC8D6 /* Switching Screens GameUITests */,
+				4F63A53C25E40873005BC8D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F63A53C25E40873005BC8D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F63A53B25E40873005BC8D6 /* Switching Screens Game.app */,
+				4F63A55625E40874005BC8D6 /* Switching Screens GameTests.xctest */,
+				4F63A56125E40874005BC8D6 /* Switching Screens GameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F63A53D25E40873005BC8D6 /* Switching Screens Game */ = {
+			isa = PBXGroup;
+			children = (
+				4F63A53E25E40873005BC8D6 /* AppDelegate.h */,
+				4F63A53F25E40873005BC8D6 /* AppDelegate.m */,
+				4F63A54125E40873005BC8D6 /* SceneDelegate.h */,
+				4F63A54225E40873005BC8D6 /* SceneDelegate.m */,
+				4F63A54425E40873005BC8D6 /* ViewController.h */,
+				4F63A5A725E410BB005BC8D6 /* ViewController2.m */,
+				4F63A5AC25E410DC005BC8D6 /* ViewController2.h */,
+				4F63A54525E40873005BC8D6 /* ViewController.m */,
+				4F63A54725E40873005BC8D6 /* Main.storyboard */,
+				4F63A54A25E40874005BC8D6 /* Assets.xcassets */,
+				4F63A54C25E40874005BC8D6 /* LaunchScreen.storyboard */,
+				4F63A54F25E40874005BC8D6 /* Info.plist */,
+				4F63A55025E40874005BC8D6 /* main.m */,
+				4F63A57625E40E2A005BC8D6 /* 1.jpeg */,
+				4F63A57B25E40E30005BC8D6 /* 2.png */,
+				4F63A58025E40E35005BC8D6 /* 3.jpeg */,
+				4F63A58525E40E39005BC8D6 /* 4.png */,
+				4F63A58A25E40E3F005BC8D6 /* 5.jpeg */,
+				4F63A59F25E40E60005BC8D6 /* 6.png */,
+				4F63A59025E40E48005BC8D6 /* 7.png */,
+				4F63A59525E40E4C005BC8D6 /* 8.png */,
+				4F63A59A25E40E52005BC8D6 /* 9.png */,
+			);
+			path = "Switching Screens Game";
+			sourceTree = "<group>";
+		};
+		4F63A55925E40874005BC8D6 /* Switching Screens GameTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F63A55A25E40874005BC8D6 /* Switching_Screens_GameTests.m */,
+				4F63A55C25E40874005BC8D6 /* Info.plist */,
+			);
+			path = "Switching Screens GameTests";
+			sourceTree = "<group>";
+		};
+		4F63A56425E40874005BC8D6 /* Switching Screens GameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4F63A56525E40874005BC8D6 /* Switching_Screens_GameUITests.m */,
+				4F63A56725E40874005BC8D6 /* Info.plist */,
+			);
+			path = "Switching Screens GameUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F63A53A25E40873005BC8D6 /* Switching Screens Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F63A56A25E40874005BC8D6 /* Build configuration list for PBXNativeTarget "Switching Screens Game" */;
+			buildPhases = (
+				4F63A53725E40873005BC8D6 /* Sources */,
+				4F63A53825E40873005BC8D6 /* Frameworks */,
+				4F63A53925E40873005BC8D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Switching Screens Game";
+			productName = "Switching Screens Game";
+			productReference = 4F63A53B25E40873005BC8D6 /* Switching Screens Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F63A55525E40874005BC8D6 /* Switching Screens GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F63A56D25E40874005BC8D6 /* Build configuration list for PBXNativeTarget "Switching Screens GameTests" */;
+			buildPhases = (
+				4F63A55225E40874005BC8D6 /* Sources */,
+				4F63A55325E40874005BC8D6 /* Frameworks */,
+				4F63A55425E40874005BC8D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F63A55825E40874005BC8D6 /* PBXTargetDependency */,
+			);
+			name = "Switching Screens GameTests";
+			productName = "Switching Screens GameTests";
+			productReference = 4F63A55625E40874005BC8D6 /* Switching Screens GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F63A56025E40874005BC8D6 /* Switching Screens GameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F63A57025E40874005BC8D6 /* Build configuration list for PBXNativeTarget "Switching Screens GameUITests" */;
+			buildPhases = (
+				4F63A55D25E40874005BC8D6 /* Sources */,
+				4F63A55E25E40874005BC8D6 /* Frameworks */,
+				4F63A55F25E40874005BC8D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F63A56325E40874005BC8D6 /* PBXTargetDependency */,
+			);
+			name = "Switching Screens GameUITests";
+			productName = "Switching Screens GameUITests";
+			productReference = 4F63A56125E40874005BC8D6 /* Switching Screens GameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F63A53325E40873005BC8D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					4F63A53A25E40873005BC8D6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					4F63A55525E40874005BC8D6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4F63A53A25E40873005BC8D6;
+					};
+					4F63A56025E40874005BC8D6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4F63A53A25E40873005BC8D6;
+					};
+				};
+			};
+			buildConfigurationList = 4F63A53625E40873005BC8D6 /* Build configuration list for PBXProject "Switching Screens Game" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F63A53225E40873005BC8D6;
+			productRefGroup = 4F63A53C25E40873005BC8D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F63A53A25E40873005BC8D6 /* Switching Screens Game */,
+				4F63A55525E40874005BC8D6 /* Switching Screens GameTests */,
+				4F63A56025E40874005BC8D6 /* Switching Screens GameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F63A53925E40873005BC8D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F63A59B25E40E52005BC8D6 /* 9.png in Resources */,
+				4F63A59625E40E4C005BC8D6 /* 8.png in Resources */,
+				4F63A59125E40E48005BC8D6 /* 7.png in Resources */,
+				4F63A54E25E40874005BC8D6 /* LaunchScreen.storyboard in Resources */,
+				4F63A58625E40E39005BC8D6 /* 4.png in Resources */,
+				4F63A54B25E40874005BC8D6 /* Assets.xcassets in Resources */,
+				4F63A5A025E40E60005BC8D6 /* 6.png in Resources */,
+				4F63A57C25E40E30005BC8D6 /* 2.png in Resources */,
+				4F63A58125E40E35005BC8D6 /* 3.jpeg in Resources */,
+				4F63A54925E40873005BC8D6 /* Main.storyboard in Resources */,
+				4F63A57725E40E2A005BC8D6 /* 1.jpeg in Resources */,
+				4F63A58B25E40E3F005BC8D6 /* 5.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F63A55425E40874005BC8D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F63A55F25E40874005BC8D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F63A53725E40873005BC8D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F63A54625E40873005BC8D6 /* ViewController.m in Sources */,
+				4F63A54025E40873005BC8D6 /* AppDelegate.m in Sources */,
+				4F63A5A825E410BB005BC8D6 /* ViewController2.m in Sources */,
+				4F63A55125E40874005BC8D6 /* main.m in Sources */,
+				4F63A54325E40873005BC8D6 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F63A55225E40874005BC8D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F63A55B25E40874005BC8D6 /* Switching_Screens_GameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F63A55D25E40874005BC8D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F63A56625E40874005BC8D6 /* Switching_Screens_GameUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F63A55825E40874005BC8D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F63A53A25E40873005BC8D6 /* Switching Screens Game */;
+			targetProxy = 4F63A55725E40874005BC8D6 /* PBXContainerItemProxy */;
+		};
+		4F63A56325E40874005BC8D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F63A53A25E40873005BC8D6 /* Switching Screens Game */;
+			targetProxy = 4F63A56225E40874005BC8D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F63A54725E40873005BC8D6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F63A54825E40873005BC8D6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4F63A54C25E40874005BC8D6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F63A54D25E40874005BC8D6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F63A56825E40874005BC8D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4F63A56925E40874005BC8D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F63A56B25E40874005BC8D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H28LDJXC2A;
+				INFOPLIST_FILE = "Switching Screens Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CS441.Switching-Screens-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F63A56C25E40874005BC8D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H28LDJXC2A;
+				INFOPLIST_FILE = "Switching Screens Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CS441.Switching-Screens-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F63A56E25E40874005BC8D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H28LDJXC2A;
+				INFOPLIST_FILE = "Switching Screens GameTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CS441.Switching-Screens-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Switching Screens Game.app/Switching Screens Game";
+			};
+			name = Debug;
+		};
+		4F63A56F25E40874005BC8D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H28LDJXC2A;
+				INFOPLIST_FILE = "Switching Screens GameTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CS441.Switching-Screens-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Switching Screens Game.app/Switching Screens Game";
+			};
+			name = Release;
+		};
+		4F63A57125E40874005BC8D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H28LDJXC2A;
+				INFOPLIST_FILE = "Switching Screens GameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CS441.Switching-Screens-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Switching Screens Game";
+			};
+			name = Debug;
+		};
+		4F63A57225E40874005BC8D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H28LDJXC2A;
+				INFOPLIST_FILE = "Switching Screens GameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "CS441.Switching-Screens-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Switching Screens Game";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F63A53625E40873005BC8D6 /* Build configuration list for PBXProject "Switching Screens Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F63A56825E40874005BC8D6 /* Debug */,
+				4F63A56925E40874005BC8D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F63A56A25E40874005BC8D6 /* Build configuration list for PBXNativeTarget "Switching Screens Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F63A56B25E40874005BC8D6 /* Debug */,
+				4F63A56C25E40874005BC8D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F63A56D25E40874005BC8D6 /* Build configuration list for PBXNativeTarget "Switching Screens GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F63A56E25E40874005BC8D6 /* Debug */,
+				4F63A56F25E40874005BC8D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F63A57025E40874005BC8D6 /* Build configuration list for PBXNativeTarget "Switching Screens GameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F63A57125E40874005BC8D6 /* Debug */,
+				4F63A57225E40874005BC8D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F63A53325E40873005BC8D6 /* Project object */;
+}
