@@ -6,11 +6,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController2.h"
 
 @interface ViewController : UIViewController
+
 @property (nonatomic, strong) IBOutlet UILabel* livesRemaining;
 @property (nonatomic, strong) IBOutlet UILabel* introduction;
 @property (nonatomic, strong) IBOutlet UILabel* level;
+
+@property (nonatomic, strong) IBOutlet UIButton* startButton;
+@property (nonatomic, strong) IBOutlet UIButton* guessButton;
+
+@property (nonatomic, strong) IBOutlet UITextField* guessText;
 
 @end
 

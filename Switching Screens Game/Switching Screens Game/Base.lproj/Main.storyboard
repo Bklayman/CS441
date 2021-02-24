@@ -42,6 +42,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqs-Kf-9vp"/>
+                                    <segue destination="gTL-HP-dm4" kind="show" id="7eI-iP-8WP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ka-WV-MJC">
                                 <rect key="frame" x="207" y="369" width="46" height="21"/>
@@ -57,27 +61,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dHu-3A-T15">
+                                <rect key="frame" x="139" y="605" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KA6-cN-N0D">
+                                <rect key="frame" x="153" y="647" width="69" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="guessButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6jg-6X-DOq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <size key="freeformSize" width="375" height="860"/>
                     <connections>
+                        <outlet property="guessButton" destination="KA6-cN-N0D" id="dAl-tV-Mkr"/>
+                        <outlet property="guessText" destination="dHu-3A-T15" id="hnf-36-Pzd"/>
                         <outlet property="introduction" destination="IU5-Eg-JdG" id="jVw-Sc-9BV"/>
                         <outlet property="level" destination="8Ka-WV-MJC" id="aXn-bC-bvL"/>
                         <outlet property="livesRemaining" destination="wbg-mW-Ls4" id="86J-TZ-vXF"/>
+                        <outlet property="startButton" destination="JlB-KC-GLw" id="Vei-cd-tNu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-215.21739130434784" y="76.339285714285708"/>
+            <point key="canvasLocation" x="-776" y="-452"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="9XE-8d-aKS">
             <objects>
                 <viewController id="gTL-HP-dm4" customClass="ViewController2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGE-Tu-kUf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="806"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="dnf-pT-xga">
@@ -124,11 +146,24 @@
                         <viewLayoutGuide key="safeArea" id="j4Z-s5-s0N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="K7n-qi-Pgy"/>
                     <size key="freeformSize" width="375" height="860"/>
+                    <connections>
+                        <outlet property="num1" destination="Dwp-90-4jU" id="pSH-Ey-YGk"/>
+                        <outlet property="num10" destination="hh2-Os-roO" id="Cog-im-dWR"/>
+                        <outlet property="num2" destination="dnf-pT-xga" id="zf8-4O-Z3G"/>
+                        <outlet property="num3" destination="3Ul-F2-PMB" id="ocw-bm-DHF"/>
+                        <outlet property="num4" destination="HRW-Ep-BGY" id="5x2-aW-crT"/>
+                        <outlet property="num5" destination="9DO-nO-aFt" id="eNW-Ze-U7V"/>
+                        <outlet property="num6" destination="02I-Pr-ko0" id="qK6-hR-73n"/>
+                        <outlet property="num7" destination="Big-0D-FO9" id="Svb-Ri-Kwe"/>
+                        <outlet property="num8" destination="PQS-en-F32" id="0bK-Hr-lJR"/>
+                        <outlet property="num9" destination="4la-TP-tLn" id="0mJ-nF-1la"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbD-1U-Uhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-502.17391304347831" y="-585.26785714285711"/>
+            <point key="canvasLocation" x="-141" y="-452"/>
         </scene>
     </scenes>
     <resources>

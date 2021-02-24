@@ -17,7 +17,7 @@ NSMutableArray* hangmanLetterIndices;
 int misses;
 NSString* wordToGuess;
 
-- (UIImageView*)getUIImage:(int)index{
+- (UIImageView*)getUIImage:(int)index{ //Returns the UIImage dash at the index provided
     switch(index){
         case 1:
             return _Dash1;
@@ -68,7 +68,7 @@ NSString* wordToGuess;
     }
 }
 
-- (UILabel*)getUILabel:(int)index{
+- (UILabel*)getUILabel:(int)index{  //Returns the UILabel letter at the index provided
     switch(index){
         case 1 :
             return _Letter1;
@@ -119,7 +119,7 @@ NSString* wordToGuess;
     }
 }
 
-- (NSMutableArray*)showNeededElements:(unsigned long)wordLength{
+- (NSMutableArray*)showNeededElements:(unsigned long)wordLength{ //Displays dashes at places needed for the chosen word, removes all text already in every UILabel, and returns UILabels at spaces needed for the chosen word
     NSMutableArray* usedLabels = [NSMutableArray array];
     if(wordLength < 8){ //Word length: 1-7
         for(int i = 7; i > 0; i--){
@@ -207,14 +207,14 @@ NSString* wordToGuess;
     return usedLabels;
 }
 
-- (void)playHangman:(NSArray*)hangmanWordsArray {
+- (void)playHangman:(NSArray*)hangmanWordsArray { //Initializes everything on the hangman board
     misses = 0;
     int chosenWordIndex = arc4random_uniform(10000);
     wordToGuess = hangmanWordsArray[chosenWordIndex]; //Player guesses this word
     hangmanLetterIndices = [self showNeededElements:wordToGuess.length];
 }
 
-- (IBAction)hangmanGuessButtonClicked:(id)sender{
+- (IBAction)hangmanGuessButtonClicked:(id)sender{ //Takes whatever is entered by the player, checks the input, and if the input is valid, checks the chosen word for the guessed letter (adding a miss if it is wrong)
     NSString* guess = _Guess.text;
     if(guess.length != 1){
         return;
