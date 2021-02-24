@@ -54,5 +54,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *Dash21;
 @property (nonatomic, strong) IBOutlet UIImageView *Dash22;
 
+@property (nonatomic, strong) IBOutlet UITextField *Guess;
+
 @end
 

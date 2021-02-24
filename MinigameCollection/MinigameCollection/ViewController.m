@@ -13,6 +13,10 @@
 
 @implementation ViewController
 
+NSMutableArray* hangmanLetterIndices;
+int misses;
+NSString* wordToGuess;
+
 - (UIImageView*)getUIImage:(int)index{
     switch(index){
         case 1:
@@ -116,28 +120,118 @@
 }
 
 - (NSMutableArray*)showNeededElements:(unsigned long)wordLength{
-    NSMutableArray* usedLabels;
+    NSMutableArray* usedLabels = [NSMutableArray array];
     if(wordLength < 8){ //Word length: 1-7
         for(int i = 7; i > 0; i--){
-            if(i <= 7 - wordLength){
-                [self getUIImage:i].hidden = NO;
-                //TODO
+            [self getUIImage:i].hidden = FALSE;
+            [self getUILabel:i].text = @"";
+        }
+        unsigned long blankSpaces = 7 - wordLength;
+        int extraSpace = blankSpaces % 2;
+        for(int i = 0; i < 8; i++){
+            if(i < blankSpaces / 2 + extraSpace || i > 7 - blankSpaces / 2){
+                [self getUIImage:i].hidden = TRUE;
             } else {
-                //TODO
+                [usedLabels addObject:[self getUILabel:i]];
             }
         }
+        for(int i = 8; i < 23; i++){
+            [self getUIImage:i].hidden = TRUE;
+            [self getUILabel:i].text = @"";
+        }
     } else if(wordLength < 15){ //Word length: 8-14
-        //TODO
+        unsigned long blankSpaces = 14 - wordLength;
+        int extraSpace = blankSpaces % 2;
+        unsigned long line1Blanks = blankSpaces / 2;
+        int line1ExtraSpace = line1Blanks % 2;
+        unsigned long line2Blanks = blankSpaces / 2 + extraSpace;
+        int line2ExtraSpace = line2Blanks % 2;
+        for(int i = 0; i < 8; i++){
+            if(i < line1Blanks / 2 + line1ExtraSpace || i > 7 - line1Blanks / 2){
+                [self getUIImage:i].hidden = TRUE;
+            } else {
+                [usedLabels addObject:[self getUILabel:i]];
+            }
+            [self getUILabel:i].text = @"";
+        }
+        for(int i = 8; i < 15; i++){
+            if(i < 8 + line2Blanks / 2 + line2ExtraSpace || i > 14 - line2Blanks / 2){
+                [self getUIImage:i].hidden = TRUE;
+            } else {
+                [usedLabels addObject:[self getUILabel:i]];
+            }
+            [self getUILabel:i].text = @"";
+        }
+        for(int i = 15; i < 23; i++){
+            [self getUIImage:i].hidden = TRUE;
+            [self getUILabel:i].text = @"";
+        }
     } else { //Word length: 15-22
-        //TODO
+        unsigned long blankSpaces = 22 - wordLength;
+        int extraSpaces = blankSpaces % 3;
+        unsigned long line1Blanks = blankSpaces / 3;
+        if(extraSpaces > 0){
+            line1Blanks++;
+        }
+        int line1ExtraSpace = line1Blanks % 2;
+        unsigned long line2Blanks = blankSpaces / 3;
+        if(extraSpaces == 2){
+            line2Blanks++;
+        }
+        int line2ExtraSpace = line2Blanks % 2;
+        unsigned long line3Blanks = blankSpaces / 3;
+        int line3ExtraSpace = line3Blanks % 2;
+        for(int i = 0; i < 23; i++){
+            if(i < 8){
+                if(i < line1Blanks / 2 + line1ExtraSpace || i > 7 - line1Blanks / 2){
+                    [self getUIImage:i].hidden = TRUE;
+                } else {
+                    [usedLabels addObject:[self getUILabel:i]];
+                }
+            } else if(i < 15){
+                if(i < 7 + line2Blanks / 2 + line2ExtraSpace || i > 14 - line2Blanks / 2){
+                    [self getUIImage:i].hidden = TRUE;
+                } else {
+                    [usedLabels addObject:[self getUILabel:i]];
+                }
+            } else {
+                if(i < 14 + line3Blanks / 2 + line3ExtraSpace || i > 22 - line3Blanks / 2){
+                    [self getUIImage:i].hidden = TRUE;
+                } else {
+                    [usedLabels addObject:[self getUILabel:i]];
+                }
+            }
+            [self getUILabel:i].text = @"";
+        }
     }
     return usedLabels;
 }
 
 - (void)playHangman:(NSArray*)hangmanWordsArray {
+    misses = 0;
     int chosenWordIndex = arc4random_uniform(10000);
-    NSString* chosenWord = hangmanWordsArray[chosenWordIndex]; //Player guesses this word
-    NSMutableArray* letterIndeces = [self showNeededElements:chosenWord.length];
+    wordToGuess = hangmanWordsArray[chosenWordIndex]; //Player guesses this word
+    hangmanLetterIndices = [self showNeededElements:wordToGuess.length];
+}
+
+- (IBAction)hangmanGuessButtonClicked:(id)sender{
+    NSString* guess = _Guess.text;
+    if(guess.length != 1){
+        return;
+    }
+    _Guess.text = @"";
+    guess = [guess lowercaseString];
+    char charGuessed = [guess characterAtIndex:0];
+    if(charGuessed < 'a' || charGuessed > 'z'){
+        return;
+    }
+    bool correctGuess = FALSE;
+    for(int i = 0; i < wordToGuess.length; i++){
+        //TODO
+    }
+    if(!correctGuess){
+        //TODO
+    }
 }
 
 - (void)viewDidLoad {

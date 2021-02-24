@@ -273,6 +273,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="hangmanGuessButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFc-lc-Bhi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -302,6 +305,7 @@
                         <outlet property="Dash7" destination="6JS-XM-D0R" id="5Tn-je-EJ8"/>
                         <outlet property="Dash8" destination="caY-Er-eyh" id="6e8-rU-6aQ"/>
                         <outlet property="Dash9" destination="5YJ-ls-q0p" id="pAA-ur-osa"/>
+                        <outlet property="Guess" destination="cFW-i1-mKl" id="MId-HH-orL"/>
                         <outlet property="Letter1" destination="8GZ-x8-Zhp" id="BJP-ef-ec1"/>
                         <outlet property="Letter10" destination="xtF-Xy-ALr" id="MvU-4c-9mA"/>
                         <outlet property="Letter11" destination="AfK-wV-IP8" id="PL7-cp-MGi"/>
