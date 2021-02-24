@@ -6,7 +6,8 @@
 //
 
 #import "ViewController.h"
-#import "ViewController2.h"
+#import "Singleton.h"
+
 
 @interface ViewController ()
 
@@ -16,7 +17,6 @@
 
 int livesLeft = 3;
 int level = 4;
-int intsToGuess[10];
 bool started = FALSE;
 
 - (void)gameOver{
@@ -33,7 +33,7 @@ bool started = FALSE;
     int ascii0 = '0';
     bool win = TRUE;
     for(int i = 0; i < level; i++){
-        if([guess characterAtIndex:i] != ascii0 + intsToGuess[i] - 1){
+        if([guess characterAtIndex:i] != ascii0 + [[Singleton sharedObject].commonString characterAtIndex:i] - 1){
             win = FALSE;
         }
     }
@@ -63,7 +63,7 @@ bool started = FALSE;
         livesLeft = 3;
         level = 4;
         for(int i = 0; i < level; i++){
-            intsToGuess[i] = arc4random_uniform(level);
+            [Singleton sharedObject].commonString = [@(arc4random_uniform(10^level)) stringValue];
         }
         started = TRUE;
     }

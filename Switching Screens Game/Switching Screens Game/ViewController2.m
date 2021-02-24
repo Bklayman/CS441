@@ -6,6 +6,7 @@
 //
 
 #import "ViewController2.h"
+#import "Singleton.h"
 
 @interface ViewController2 ()
 
@@ -66,8 +67,15 @@
 }
 
 - (void)changeNums{
-    //TODO
-    
+    NSString* newConfig = [Singleton sharedObject].commonString;
+    printf(newConfig.length);
+    for(int i = 0; i < newConfig.length; i++){
+        [self getNumImage:i].image = [UIImage imageNamed:[self getImageLink:([newConfig characterAtIndex:i] - '1')]];
+        [self getNumImage:i].hidden = FALSE;
+    }
+    for(int i = (int)newConfig.length; i < 10; i++){
+        [self getNumImage:i].hidden = TRUE;
+    }
 }
 
 - (void)viewDidLoad {

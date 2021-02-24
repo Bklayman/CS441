@@ -26,6 +26,7 @@
 		4F63A59B25E40E52005BC8D6 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A59A25E40E52005BC8D6 /* 9.png */; };
 		4F63A5A025E40E60005BC8D6 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F63A59F25E40E60005BC8D6 /* 6.png */; };
 		4F63A5A825E410BB005BC8D6 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A5A725E410BB005BC8D6 /* ViewController2.m */; };
+		4F9D86AF25E6F4E1009E4A3A /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D86AE25E6F4E1009E4A3A /* Singleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		4F63A59F25E40E60005BC8D6 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 6.png; path = ../../../../../../../../Downloads/6.png; sourceTree = "<group>"; };
 		4F63A5A725E410BB005BC8D6 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		4F63A5AC25E410DC005BC8D6 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		4F9D86AD25E6F2B1009E4A3A /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		4F9D86AE25E6F4E1009E4A3A /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				4F63A5AC25E410DC005BC8D6 /* ViewController2.h */,
 				4F63A54525E40873005BC8D6 /* ViewController.m */,
 				4F63A54425E40873005BC8D6 /* ViewController.h */,
+				4F9D86AD25E6F2B1009E4A3A /* Singleton.h */,
+				4F9D86AE25E6F4E1009E4A3A /* Singleton.m */,
 				4F63A54725E40873005BC8D6 /* Main.storyboard */,
 				4F63A54A25E40874005BC8D6 /* Assets.xcassets */,
 				4F63A54C25E40874005BC8D6 /* LaunchScreen.storyboard */,
@@ -310,6 +315,7 @@
 				4F63A54625E40873005BC8D6 /* ViewController.m in Sources */,
 				4F63A54025E40873005BC8D6 /* AppDelegate.m in Sources */,
 				4F63A5A825E410BB005BC8D6 /* ViewController2.m in Sources */,
+				4F9D86AF25E6F4E1009E4A3A /* Singleton.m in Sources */,
 				4F63A55125E40874005BC8D6 /* main.m in Sources */,
 				4F63A54325E40873005BC8D6 /* SceneDelegate.m in Sources */,
 			);
