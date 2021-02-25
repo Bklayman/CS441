@@ -44,22 +44,24 @@
 - (NSString*)getImageLink:(int)index{
     switch(index){
         case 0:
-            return @"1.jpeg";
+            return @"0.png";
         case 1:
-            return @"2.png";
+            return @"1.jpeg";
         case 2:
-            return @"3.jpeg";
+            return @"2.png";
         case 3:
-            return @"4.png";
+            return @"3.jpeg";
         case 4:
-            return @"5.jpeg";
+            return @"4.png";
         case 5:
-            return @"6.png";
+            return @"5.jpeg";
         case 6:
-            return @"7.png";
+            return @"6.png";
         case 7:
-            return @"8.png";
+            return @"7.png";
         case 8:
+            return @"8.png";
+        case 9:
             return @"9.png";
         default:
             return NULL;
@@ -68,10 +70,10 @@
 
 - (void)changeNums{
     NSString* newConfig = [Singleton sharedObject].commonString;
-    printf(newConfig.length);
+    printf([[Singleton sharedObject].commonString UTF8String]);
     for(int i = 0; i < newConfig.length; i++){
-        [self getNumImage:i].image = [UIImage imageNamed:[self getImageLink:([newConfig characterAtIndex:i] - '1')]];
         [self getNumImage:i].hidden = FALSE;
+        [self getNumImage:i].image = [UIImage imageNamed:[self getImageLink:([newConfig characterAtIndex:i] - '0')]];
     }
     for(int i = (int)newConfig.length; i < 10; i++){
         [self getNumImage:i].hidden = TRUE;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F4243E525E83B7F00A5C831 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F4243E425E83B7F00A5C831 /* 0.png */; };
 		4F63A54025E40873005BC8D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A53F25E40873005BC8D6 /* AppDelegate.m */; };
 		4F63A54325E40873005BC8D6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A54225E40873005BC8D6 /* SceneDelegate.m */; };
 		4F63A54625E40873005BC8D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F63A54525E40873005BC8D6 /* ViewController.m */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F4243E425E83B7F00A5C831 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 0.png; path = ../../../../../../../../Downloads/0.png; sourceTree = "<group>"; };
 		4F63A53B25E40873005BC8D6 /* Switching Screens Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Switching Screens Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F63A53E25E40873005BC8D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F63A53F25E40873005BC8D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				4F63A54C25E40874005BC8D6 /* LaunchScreen.storyboard */,
 				4F63A54F25E40874005BC8D6 /* Info.plist */,
 				4F63A55025E40874005BC8D6 /* main.m */,
+				4F4243E425E83B7F00A5C831 /* 0.png */,
 				4F63A57625E40E2A005BC8D6 /* 1.jpeg */,
 				4F63A57B25E40E30005BC8D6 /* 2.png */,
 				4F63A58025E40E35005BC8D6 /* 3.jpeg */,
@@ -286,6 +289,7 @@
 				4F63A57C25E40E30005BC8D6 /* 2.png in Resources */,
 				4F63A58125E40E35005BC8D6 /* 3.jpeg in Resources */,
 				4F63A54925E40873005BC8D6 /* Main.storyboard in Resources */,
+				4F4243E525E83B7F00A5C831 /* 0.png in Resources */,
 				4F63A57725E40E2A005BC8D6 /* 1.jpeg in Resources */,
 				4F63A58B25E40E3F005BC8D6 /* 5.jpeg in Resources */,
 			);
