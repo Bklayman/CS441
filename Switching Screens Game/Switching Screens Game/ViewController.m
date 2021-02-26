@@ -25,21 +25,23 @@ bool started = FALSE;
     //TODO
 }
 
+- (void)winGame{
+    started = FALSE;
+    _introduction.text = @"Congratulations, you win! Press start to play again.";
+}
+
 - (IBAction)guessButtonClicked:(id)sender{
     NSString* guess = _guessText.text;
     _guessText.text = @"";
-    if(guess.length != level){
-        return;
-    }
-    int ascii0 = '0';
     bool win = TRUE;
     for(int i = 0; i < level; i++){
         if(guess.length != [Singleton sharedObject].commonString.length){
             win = FALSE;
             break;
         }
-        if([guess characterAtIndex:i] != ascii0 + [[Singleton sharedObject].commonString characterAtIndex:i] - 1){
+        if([guess characterAtIndex:i] != [[Singleton sharedObject].commonString characterAtIndex:i]){
             win = FALSE;
+            break;
         }
     }
     if(!win){
@@ -50,7 +52,11 @@ bool started = FALSE;
             level--;
         }
     } else {
-        level++;
+        if(level == 10){
+            [self winGame];
+        } else {
+            level++;
+        }
     }
     _livesRemaining.text = [@(livesLeft) stringValue];
     _level.text = [@(level) stringValue];
