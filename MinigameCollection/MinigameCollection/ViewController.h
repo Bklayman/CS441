@@ -56,5 +56,7 @@
 
 @property (nonatomic, strong) IBOutlet UITextField *Guess;
 
+@property (nonatomic, strong) IBOutlet UIButton *ExitButton;
+
 @end
 

@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "Singleton.h"
 
 @interface ViewController ()
 
@@ -244,6 +245,15 @@ NSString* wordToGuess;
     
     //TODO Main Menu for Choosing which Game to Play
     [self playHangman:hangmanWordsArray];
+}
+
+- (IBAction)textBoxClicked:(id)sender{
+    _ExitButton.hidden = FALSE;
+}
+
+- (IBAction)exitButtonClicked:(id)sender{
+    _ExitButton.hidden = TRUE;
+    [Singleton sharedObject].gaveAnswer = FALSE;
 }
 
 
