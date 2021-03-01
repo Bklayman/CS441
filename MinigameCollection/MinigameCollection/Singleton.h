@@ -12,8 +12,8 @@
 
 + (Singleton*) sharedObject;
 
-@property BOOL gaveAnswer;
 @property BOOL correctAnswer;
 @property int numFound;
+@property char guess;
 
 @end

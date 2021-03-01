@@ -226,13 +226,24 @@ NSString* wordToGuess;
     if(charGuessed < 'a' || charGuessed > 'z'){
         return;
     }
-    bool correctGuess = FALSE;
+    NSMutableArray* letterPlaces;
     for(int i = 0; i < wordToGuess.length; i++){
-        //TODO
+        if([wordToGuess characterAtIndex:i] == charGuessed){
+            [letterPlaces addObject:[NSNumber numberWithInt:i]];
+        }
     }
-    if(!correctGuess){
-        //TODO
+    if(letterPlaces.count == 0){
+        [Singleton sharedObject].correctAnswer = FALSE;
+    } else {
+        [Singleton sharedObject].correctAnswer = TRUE;
+        [Singleton sharedObject].numFound = (int) letterPlaces.count;
+        [Singleton sharedObject].guess = charGuessed;
+        [self placeLetters:letterPlaces];
     }
+}
+
+- (void)placeLetters:(NSMutableArray*)letterPlaces{
+    //TODO
 }
 
 - (void)viewDidLoad {
@@ -243,18 +254,18 @@ NSString* wordToGuess;
         error:NULL];
     NSArray* hangmanWordsArray = [loadedWord componentsSeparatedByString:@"\n"];
     
+    [_Guess addTarget:self action:@selector(guessTextDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
     //TODO Main Menu for Choosing which Game to Play
     [self playHangman:hangmanWordsArray];
+}
+
+- (IBAction)guessTextDone:(id)sender{
+    [sender resignFirstResponder];
 }
 
 - (IBAction)textBoxClicked:(id)sender{
     _ExitButton.hidden = FALSE;
 }
-
-- (IBAction)exitButtonClicked:(id)sender{
-    _ExitButton.hidden = TRUE;
-    [Singleton sharedObject].gaveAnswer = FALSE;
-}
-
 
 @end

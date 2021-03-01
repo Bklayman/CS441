@@ -15,10 +15,10 @@
 @implementation HangmanVC2
 
 - (void)viewDidLoad {
-    if(![Singleton sharedObject].gaveAnswer){
-        _Description.text = @"No guess was given. Please return to the game area.";
+    if([Singleton sharedObject].correctAnswer){
+        _Description.text = @"There are " + [@([Singleton sharedObject].numFound) stringValue] + " " + [Singleton sharedObject].guess + "s in this word.";
     } else {
-        //TODO
+        _Description.text = @"Your guess is incorrect.";
     }
 }
 

@@ -266,7 +266,7 @@
                                 <rect key="frame" x="130" y="497" width="114" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textBoxClicked:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="zZk-sU-QXh"/>
                                 </connections>
@@ -278,18 +278,6 @@
                                 <state key="normal" title="Guess"/>
                                 <connections>
                                     <action selector="hangmanGuessButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFc-lc-Bhi"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5s-gv-pWo">
-                                <rect key="frame" x="63" y="496" width="31" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Exit"/>
-                                <connections>
-                                    <action selector="exitButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAI-Gx-hab"/>
-                                    <segue destination="Oba-Ey-ufg" kind="popoverPresentation" popoverAnchorView="i5s-gv-pWo" id="2lC-7r-dAL">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -320,7 +308,6 @@
                         <outlet property="Dash7" destination="6JS-XM-D0R" id="5Tn-je-EJ8"/>
                         <outlet property="Dash8" destination="caY-Er-eyh" id="6e8-rU-6aQ"/>
                         <outlet property="Dash9" destination="5YJ-ls-q0p" id="pAA-ur-osa"/>
-                        <outlet property="ExitButton" destination="i5s-gv-pWo" id="ylQ-wU-xMM"/>
                         <outlet property="Guess" destination="cFW-i1-mKl" id="MId-HH-orL"/>
                         <outlet property="Letter1" destination="8GZ-x8-Zhp" id="BJP-ef-ec1"/>
                         <outlet property="Letter10" destination="xtF-Xy-ALr" id="MvU-4c-9mA"/>
@@ -355,7 +342,7 @@
             <objects>
                 <viewController id="Oba-Ey-ufg" customClass="HangmanVC2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FqO-Wa-JPl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="806"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPf-a3-KqV">
