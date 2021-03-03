@@ -11,7 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FaceDraw : UIView
 
-@property (nonatomic) CGPoint myPoint;
+@property (nonatomic) CGPoint startPoint;
+@property (nonatomic) CGPoint endPoint;
 
 @end
 

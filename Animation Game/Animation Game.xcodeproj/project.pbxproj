@@ -17,6 +17,7 @@
 		4FBF2B0D25ED452B005F86C6 /* Animation_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBF2B0C25ED452B005F86C6 /* Animation_GameTests.m */; };
 		4FBF2B1825ED452B005F86C6 /* Animation_GameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBF2B1725ED452B005F86C6 /* Animation_GameUITests.m */; };
 		4FBF2B3325ED47E7005F86C6 /* FaceDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBF2B3225ED47E7005F86C6 /* FaceDraw.m */; };
+		4FE4B6AD25EFF2E000E95982 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4B6AC25EFF2E000E95982 /* Singleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		4FBF2B1925ED452B005F86C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FBF2B3125ED47E7005F86C6 /* FaceDraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDraw.h; sourceTree = "<group>"; };
 		4FBF2B3225ED47E7005F86C6 /* FaceDraw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceDraw.m; sourceTree = "<group>"; };
+		4FE4B6AC25EFF2E000E95982 /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		4FE4B6B125EFF2EA00E95982 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				4FBF2AF625ED452A005F86C6 /* ViewController.h */,
 				4FBF2AF725ED452A005F86C6 /* ViewController.m */,
 				4FBF2AF925ED452A005F86C6 /* Main.storyboard */,
+				4FE4B6AC25EFF2E000E95982 /* Singleton.m */,
+				4FE4B6B125EFF2EA00E95982 /* Singleton.h */,
 				4FBF2B3125ED47E7005F86C6 /* FaceDraw.h */,
 				4FBF2B3225ED47E7005F86C6 /* FaceDraw.m */,
 				4FBF2AFC25ED452B005F86C6 /* Assets.xcassets */,
@@ -274,6 +279,7 @@
 				4FBF2AF825ED452A005F86C6 /* ViewController.m in Sources */,
 				4FBF2AF225ED452A005F86C6 /* AppDelegate.m in Sources */,
 				4FBF2B3325ED47E7005F86C6 /* FaceDraw.m in Sources */,
+				4FE4B6AD25EFF2E000E95982 /* Singleton.m in Sources */,
 				4FBF2B0325ED452B005F86C6 /* main.m in Sources */,
 				4FBF2AF525ED452A005F86C6 /* SceneDelegate.m in Sources */,
 			);

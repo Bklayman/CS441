@@ -9,9 +9,8 @@
 
 @implementation FaceDraw
 
-@synthesize myPoint = _myPoint; //https://agilewarrior.wordpress.com/2012/09/04/how-to-draw-circles-where-ever-someone-taps-your-screen-iphone-ipad-ios/
-
-//NSMutableArray* paths;
+@synthesize endPoint = _endPoint;
+@synthesize startPoint = _startPoint; //https://agilewarrior.wordpress.com/2012/09/04/how-to-draw-circles-where-ever-someone-taps-your-screen-iphone-ipad-ios/
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -20,20 +19,26 @@
     CGContextSetLineWidth(context, 2.0);
     CGContextSetRGBFillColor(context, 0, 1, 0, 1);
     CGContextSetRGBStrokeColor(context, 0, 1, 0, 1);
-    CGRect circlePoint = (CGRectMake(self.myPoint.x, self.myPoint.y, 10.0, 10.0));
-    
-    CGContextFillEllipseInRect(context, circlePoint);
-}
-
-- (void) setMyPoint:(CGPoint)myPoint{
-    _myPoint = myPoint;
-    [self setNeedsDisplay];
+    CGRect circlePoint1 = (CGRectMake(self.startPoint.x, self.startPoint.y, 10.0, 10.0));
+    CGContextFillEllipseInRect(context, circlePoint1);
+    CGRect circlePoint2 = (CGRectMake(self.endPoint.x, self.endPoint.y, 10.0, 10.0));
+    CGContextFillEllipseInRect(context, circlePoint2);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     for(UITouch *t in touches){
-        self.myPoint = [t locationInView:self];
+        self.startPoint = [t locationInView:self];
     }
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    for(UITouch *t in touches){
+        //self.myPoint = [t locationInView:self];
+        self.endPoint = [t locationInView:self];
+    }
+    _startPoint = self.startPoint;
+    _endPoint = self.endPoint;
+    [self setNeedsDisplay];
 }
 
 
