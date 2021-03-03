@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     if([Singleton sharedObject].correctAnswer){
-        _Description.text = @"There are " + [@([Singleton sharedObject].numFound) stringValue] + " " + [Singleton sharedObject].guess + "s in this word.";
+        _Description.text = [NSString stringWithFormat:@"%@%@%s%c%s", @"There are ", [@([Singleton sharedObject].numFound) stringValue], " ", [Singleton sharedObject].guess, "s in this word."];
     } else {
         _Description.text = @"Your guess is incorrect.";
     }

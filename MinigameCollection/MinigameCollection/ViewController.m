@@ -19,6 +19,7 @@ int misses;
 NSString* wordToGuess;
 
 - (UIImageView*)getUIImage:(int)index{ //Returns the UIImage dash at the index provided
+    index++;
     switch(index){
         case 1:
             return _Dash1;
@@ -70,6 +71,7 @@ NSString* wordToGuess;
 }
 
 - (UILabel*)getUILabel:(int)index{  //Returns the UILabel letter at the index provided
+    index++;
     switch(index){
         case 1 :
             return _Letter1;
@@ -121,33 +123,36 @@ NSString* wordToGuess;
 }
 
 - (NSMutableArray*)showNeededElements:(unsigned long)wordLength{ //Displays dashes at places needed for the chosen word, removes all text already in every UILabel, and returns UILabels at spaces needed for the chosen word
+    NSLog(@"%@", [[NSNumber numberWithLong:wordLength] stringValue]);
     NSMutableArray* usedLabels = [NSMutableArray array];
     if(wordLength < 8){ //Word length: 1-7
-        for(int i = 7; i > 0; i--){
+        for(int i = 6; i >= 0; i--){
             [self getUIImage:i].hidden = FALSE;
             [self getUILabel:i].text = @"";
         }
         unsigned long blankSpaces = 7 - wordLength;
         int extraSpace = blankSpaces % 2;
-        for(int i = 0; i < 8; i++){
+        for(int i = 0; i < 7; i++){
             if(i < blankSpaces / 2 + extraSpace || i > 7 - blankSpaces / 2){
+                NSLog(@"i:%@", [[NSNumber numberWithInt:i] stringValue]);
                 [self getUIImage:i].hidden = TRUE;
             } else {
                 [usedLabels addObject:[self getUILabel:i]];
             }
         }
-        for(int i = 8; i < 23; i++){
+        for(int i = 7; i < 22; i++){
             [self getUIImage:i].hidden = TRUE;
             [self getUILabel:i].text = @"";
         }
     } else if(wordLength < 15){ //Word length: 8-14
         unsigned long blankSpaces = 14 - wordLength;
+        NSLog(@"%@", [[NSNumber numberWithLong:blankSpaces] stringValue]);
         int extraSpace = blankSpaces % 2;
         unsigned long line1Blanks = blankSpaces / 2;
         int line1ExtraSpace = line1Blanks % 2;
         unsigned long line2Blanks = blankSpaces / 2 + extraSpace;
         int line2ExtraSpace = line2Blanks % 2;
-        for(int i = 0; i < 8; i++){
+        for(int i = 0; i < 7; i++){
             if(i < line1Blanks / 2 + line1ExtraSpace || i > 7 - line1Blanks / 2){
                 [self getUIImage:i].hidden = TRUE;
             } else {
@@ -155,7 +160,7 @@ NSString* wordToGuess;
             }
             [self getUILabel:i].text = @"";
         }
-        for(int i = 8; i < 15; i++){
+        for(int i = 7; i < 14; i++){
             if(i < 8 + line2Blanks / 2 + line2ExtraSpace || i > 14 - line2Blanks / 2){
                 [self getUIImage:i].hidden = TRUE;
             } else {
@@ -163,7 +168,7 @@ NSString* wordToGuess;
             }
             [self getUILabel:i].text = @"";
         }
-        for(int i = 15; i < 23; i++){
+        for(int i = 14; i < 22; i++){
             [self getUIImage:i].hidden = TRUE;
             [self getUILabel:i].text = @"";
         }
@@ -182,14 +187,14 @@ NSString* wordToGuess;
         int line2ExtraSpace = line2Blanks % 2;
         unsigned long line3Blanks = blankSpaces / 3;
         int line3ExtraSpace = line3Blanks % 2;
-        for(int i = 0; i < 23; i++){
-            if(i < 8){
+        for(int i = 0; i < 22; i++){
+            if(i < 7){
                 if(i < line1Blanks / 2 + line1ExtraSpace || i > 7 - line1Blanks / 2){
                     [self getUIImage:i].hidden = TRUE;
                 } else {
                     [usedLabels addObject:[self getUILabel:i]];
                 }
-            } else if(i < 15){
+            } else if(i < 14){
                 if(i < 7 + line2Blanks / 2 + line2ExtraSpace || i > 14 - line2Blanks / 2){
                     [self getUIImage:i].hidden = TRUE;
                 } else {
@@ -212,6 +217,7 @@ NSString* wordToGuess;
     misses = 0;
     int chosenWordIndex = arc4random_uniform(10000);
     wordToGuess = hangmanWordsArray[chosenWordIndex]; //Player guesses this word
+    NSLog(@"%@", wordToGuess);
     hangmanLetterIndices = [self showNeededElements:wordToGuess.length];
 }
 
@@ -243,7 +249,11 @@ NSString* wordToGuess;
 }
 
 - (void)placeLetters:(NSMutableArray*)letterPlaces{
-    //TODO
+    for(int i = 0; i < [letterPlaces count]; i++){
+        int curLabelIndex = (int) letterPlaces[i];
+        UILabel* curLabel = hangmanLetterIndices[curLabelIndex];
+        curLabel.text = [NSString stringWithFormat:@"%c", [Singleton sharedObject].guess];
+    }
 }
 
 - (void)viewDidLoad {
@@ -253,7 +263,6 @@ NSString* wordToGuess;
     NSString* loadedWord = [NSString stringWithContentsOfFile:hangmanWordListPath               encoding:NSUTF8StringEncoding
         error:NULL];
     NSArray* hangmanWordsArray = [loadedWord componentsSeparatedByString:@"\n"];
-    
     [_Guess addTarget:self action:@selector(guessTextDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
     
     //TODO Main Menu for Choosing which Game to Play

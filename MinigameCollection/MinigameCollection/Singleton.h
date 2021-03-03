@@ -15,5 +15,6 @@
 @property BOOL correctAnswer;
 @property int numFound;
 @property char guess;
+@property BOOL gaveAnswer;
 
 @end

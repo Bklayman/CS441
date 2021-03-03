@@ -278,6 +278,7 @@
                                 <state key="normal" title="Guess"/>
                                 <connections>
                                     <action selector="hangmanGuessButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFc-lc-Bhi"/>
+                                    <segue destination="Oba-Ey-ufg" kind="show" id="q1h-Lk-odX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -342,7 +343,7 @@
             <objects>
                 <viewController id="Oba-Ey-ufg" customClass="HangmanVC2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FqO-Wa-JPl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="806"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPf-a3-KqV">
