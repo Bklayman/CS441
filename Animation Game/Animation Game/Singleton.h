@@ -12,6 +12,11 @@
 
 + (Singleton*) sharedObject;
 
-@property int points;
+@property int x1;
+@property int x2;
+@property int y1;
+@property int y2;
+@property int flyx;
+@property int flyy;
 
 @end

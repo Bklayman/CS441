@@ -18,6 +18,7 @@
 		4FBF2B1825ED452B005F86C6 /* Animation_GameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBF2B1725ED452B005F86C6 /* Animation_GameUITests.m */; };
 		4FBF2B3325ED47E7005F86C6 /* FaceDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBF2B3225ED47E7005F86C6 /* FaceDraw.m */; };
 		4FE4B6AD25EFF2E000E95982 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4B6AC25EFF2E000E95982 /* Singleton.m */; };
+		4FE4B6BE25EFF76300E95982 /* fly2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE4B6BD25EFF76300E95982 /* fly2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		4FBF2B3225ED47E7005F86C6 /* FaceDraw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceDraw.m; sourceTree = "<group>"; };
 		4FE4B6AC25EFF2E000E95982 /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		4FE4B6B125EFF2EA00E95982 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		4FE4B6BD25EFF76300E95982 /* fly2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fly2.png; path = ../../../../../../../../Downloads/fly2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				4FE4B6B125EFF2EA00E95982 /* Singleton.h */,
 				4FBF2B3125ED47E7005F86C6 /* FaceDraw.h */,
 				4FBF2B3225ED47E7005F86C6 /* FaceDraw.m */,
+				4FE4B6BD25EFF76300E95982 /* fly2.png */,
 				4FBF2AFC25ED452B005F86C6 /* Assets.xcassets */,
 				4FBF2AFE25ED452B005F86C6 /* LaunchScreen.storyboard */,
 				4FBF2B0125ED452B005F86C6 /* Info.plist */,
@@ -249,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE4B6BE25EFF76300E95982 /* fly2.png in Resources */,
 				4FBF2B0025ED452B005F86C6 /* LaunchScreen.storyboard in Resources */,
 				4FBF2AFD25ED452B005F86C6 /* Assets.xcassets in Resources */,
 				4FBF2AFB25ED452A005F86C6 /* Main.storyboard in Resources */,

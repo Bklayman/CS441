@@ -21,7 +21,12 @@
 
 - (id)init{
     if(self = [super init]){
-        self.points = 0;
+        self.x1 = 0;
+        self.y1 = 0;
+        self.x2 = 0;
+        self.x2 = 0;
+        self.flyx = 0;
+        self.flyy = 0;
     }
     return self;
 }

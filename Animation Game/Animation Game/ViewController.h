@@ -9,6 +9,9 @@
 
 @interface ViewController : UIViewController
 
+- (void)slashDone;
+
+@property (nonatomic, strong) IBOutlet UIImageView* fly;
 
 @end
 
