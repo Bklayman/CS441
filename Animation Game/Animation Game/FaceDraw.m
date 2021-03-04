@@ -25,11 +25,27 @@
     CGContextSetLineWidth(context, 2.0);
     CGContextSetRGBFillColor(context, 0, 1, 0, 1);
     CGContextSetRGBStrokeColor(context, 0, 1, 0, 1);
-    CGRect circlePoint1 = (CGRectMake(self.startPoint.x, self.startPoint.y, 10.0, 10.0));
+    CGRect circlePoint1 = CGRectMake(self.startPoint.x, self.startPoint.y, 10.0, 10.0);
     CGContextFillEllipseInRect(context, circlePoint1);
-    CGRect circlePoint2 = (CGRectMake(self.endPoint.x, self.endPoint.y, 10.0, 10.0));
+    CGRect circlePoint2 = CGRectMake(self.endPoint.x, self.endPoint.y, 10.0, 10.0);
     CGContextFillEllipseInRect(context, circlePoint2);
-    ViewController *test = [[ViewController alloc] init];
+    CGPoint midStart, midEnd;
+    if(self.startPoint.x < self.endPoint.x){
+        midStart = self.startPoint;
+        midEnd = self.endPoint;
+    } else {
+        midStart = self.endPoint;
+        midEnd = self.startPoint;
+    }
+    double diffX = (midEnd.x - midStart.x) / 8;
+    double diffY = (double)(midEnd.y - midStart.y) / 8;
+    int counter = 0;
+    for(int i = midStart.x; i < midEnd.x; i+= diffX){
+        CGRect midCircle = CGRectMake(i, midStart.y + counter * diffY, 10, 10);
+        CGContextFillEllipseInRect(context, midCircle);
+        counter++;
+    }
+    ViewController *test;
     [test slashDone];
 }
 

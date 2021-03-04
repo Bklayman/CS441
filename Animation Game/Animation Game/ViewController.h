@@ -13,5 +13,7 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView* fly;
 
+@property (nonatomic, strong) IBOutlet UILabel* points;
+
 @end
 
