@@ -27,6 +27,7 @@
         self.x2 = 0;
         self.flyx = 0;
         self.flyy = 0;
+        self.points = 0;
     }
     return self;
 }

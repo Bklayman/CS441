@@ -14,6 +14,9 @@
 @synthesize endPoint = _endPoint;
 @synthesize startPoint = _startPoint; //https://agilewarrior.wordpress.com/2012/09/04/how-to-draw-circles-where-ever-someone-taps-your-screen-iphone-ipad-ios/
 
+int points = 0;
+bool flyExists = true;
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
@@ -45,8 +48,26 @@
         CGContextFillEllipseInRect(context, midCircle);
         counter++;
     }
-    ViewController *test;
-    [test slashDone];
+    [self slashDone];
+}
+
+- (void)slashDone{
+    if(!flyExists){
+        return;
+    }
+    int tolerance = 10;
+    double slope = (double)abs([Singleton sharedObject].y2 - [Singleton sharedObject].y1) / (double)abs([Singleton sharedObject].x2 - [Singleton sharedObject].x1);
+    double directHitY = ((double)[Singleton sharedObject].y1) + slope * ([Singleton sharedObject].flyx - [Singleton sharedObject].x1);
+    if(fabs(directHitY - ([Singleton sharedObject].flyy)) < tolerance){
+        NSLog(@"Here");
+        _catchFly.text = @"Fly Caught!";
+        flyExists = false;
+    }
+}
+
+- (IBAction)nextFlyButtonClicked:(id)sender{
+    flyExists = true;
+    _catchFly.text = @"Fly Not Caught";
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

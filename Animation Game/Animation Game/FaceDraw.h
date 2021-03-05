@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) CGPoint startPoint;
 @property (nonatomic) CGPoint endPoint;
 
+@property (nonatomic, strong) IBOutlet UILabel* catchFly;
+
+@property (nonatomic, strong) IBOutlet UIButton* nextFlyButton;
+
 @end
 
 NS_ASSUME_NONNULL_END

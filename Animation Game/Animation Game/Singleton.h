@@ -18,5 +18,6 @@
 @property int y2;
 @property int flyx;
 @property int flyy;
+@property int points;
 
 @end
