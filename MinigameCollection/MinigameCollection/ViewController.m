@@ -123,7 +123,6 @@ NSString* wordToGuess;
 }
 
 - (NSMutableArray*)showNeededElements:(unsigned long)wordLength{ //Displays dashes at places needed for the chosen word, removes all text already in every UILabel, and returns UILabels at spaces needed for the chosen word
-    NSLog(@"%@", [[NSNumber numberWithLong:wordLength] stringValue]);
     NSMutableArray* usedLabels = [NSMutableArray array];
     if(wordLength < 8){ //Word length: 1-7
         for(int i = 6; i >= 0; i--){
@@ -133,8 +132,7 @@ NSString* wordToGuess;
         unsigned long blankSpaces = 7 - wordLength;
         int extraSpace = blankSpaces % 2;
         for(int i = 0; i < 7; i++){
-            if(i < blankSpaces / 2 + extraSpace || i > 7 - blankSpaces / 2){
-                NSLog(@"i:%@", [[NSNumber numberWithInt:i] stringValue]);
+            if(i < blankSpaces / 2 + extraSpace || i > 6 - blankSpaces / 2){
                 [self getUIImage:i].hidden = TRUE;
             } else {
                 [usedLabels addObject:[self getUILabel:i]];
@@ -146,14 +144,13 @@ NSString* wordToGuess;
         }
     } else if(wordLength < 15){ //Word length: 8-14
         unsigned long blankSpaces = 14 - wordLength;
-        NSLog(@"%@", [[NSNumber numberWithLong:blankSpaces] stringValue]);
         int extraSpace = blankSpaces % 2;
         unsigned long line1Blanks = blankSpaces / 2;
         int line1ExtraSpace = line1Blanks % 2;
         unsigned long line2Blanks = blankSpaces / 2 + extraSpace;
         int line2ExtraSpace = line2Blanks % 2;
         for(int i = 0; i < 7; i++){
-            if(i < line1Blanks / 2 + line1ExtraSpace || i > 7 - line1Blanks / 2){
+            if(i < line1Blanks / 2 + line1ExtraSpace || i > 6 - line1Blanks / 2){
                 [self getUIImage:i].hidden = TRUE;
             } else {
                 [usedLabels addObject:[self getUILabel:i]];
@@ -161,7 +158,7 @@ NSString* wordToGuess;
             [self getUILabel:i].text = @"";
         }
         for(int i = 7; i < 14; i++){
-            if(i < 8 + line2Blanks / 2 + line2ExtraSpace || i > 14 - line2Blanks / 2){
+            if(i < 7 + line2Blanks / 2 + line2ExtraSpace || i > 13 - line2Blanks / 2){
                 [self getUIImage:i].hidden = TRUE;
             } else {
                 [usedLabels addObject:[self getUILabel:i]];
@@ -189,19 +186,19 @@ NSString* wordToGuess;
         int line3ExtraSpace = line3Blanks % 2;
         for(int i = 0; i < 22; i++){
             if(i < 7){
-                if(i < line1Blanks / 2 + line1ExtraSpace || i > 7 - line1Blanks / 2){
+                if(i < line1Blanks / 2 + line1ExtraSpace || i > 6 - line1Blanks / 2){
                     [self getUIImage:i].hidden = TRUE;
                 } else {
                     [usedLabels addObject:[self getUILabel:i]];
                 }
             } else if(i < 14){
-                if(i < 7 + line2Blanks / 2 + line2ExtraSpace || i > 14 - line2Blanks / 2){
+                if(i < 7 + line2Blanks / 2 + line2ExtraSpace || i > 13 - line2Blanks / 2){
                     [self getUIImage:i].hidden = TRUE;
                 } else {
                     [usedLabels addObject:[self getUILabel:i]];
                 }
             } else {
-                if(i < 14 + line3Blanks / 2 + line3ExtraSpace || i > 22 - line3Blanks / 2){
+                if(i < 14 + line3Blanks / 2 + line3ExtraSpace || i > 21 - line3Blanks / 2){
                     [self getUIImage:i].hidden = TRUE;
                 } else {
                     [usedLabels addObject:[self getUILabel:i]];
@@ -235,7 +232,7 @@ NSString* wordToGuess;
     NSMutableArray* letterPlaces;
     for(int i = 0; i < wordToGuess.length; i++){
         if([wordToGuess characterAtIndex:i] == charGuessed){
-            [letterPlaces addObject:[NSNumber numberWithInt:i]];
+            [letterPlaces addObject:[NSNumber numberWithInt:i]]; //Not adding to letterPlaces. count is 0 after reaching here
         }
     }
     if(letterPlaces.count == 0){
