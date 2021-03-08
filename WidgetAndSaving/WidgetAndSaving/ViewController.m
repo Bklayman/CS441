@@ -43,5 +43,12 @@
     [_tableView reloadData];
 }
 
+- (IBAction)removeItem:(id)sender{
+    NSString* str = [_inputText text];
+    
+    [_inputText setText:@""];
+    [_tableView reloadData];
+}
+
 
 @end
