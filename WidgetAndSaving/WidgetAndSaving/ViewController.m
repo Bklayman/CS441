@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "Singleton.h"
 
 @interface ViewController ()
 
@@ -16,38 +17,83 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [_inputText addTarget:self action:@selector(itemTextDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
     [_tableView setDelegate:self];
     [_tableView setDataSource:self];
-    _items = [[NSMutableArray alloc] init];
-    [_items addObject:@"Apples"];
-    [_items addObject:@"Bananas"];
-    [_items addObject:@"C Code"];
-    
+    _colors = [[NSMutableArray alloc] init];
     [_tableView reloadData];
 }
 
 - (nonnull UITableViewCell*)tableView:(nonnull UITableView*)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     UITableViewCell* cell = [[UITableViewCell alloc] init];
-    [[cell textLabel] setText:[_items objectAtIndex:[indexPath row]]];
+    [[cell textLabel] setText:[_colors objectAtIndex:[indexPath row]]];
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView*)tableView numberOfRowsInSection:(NSInteger)section{
-    return [_items count];
+    return [_colors count];
+}
+
+- (void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    [_colors removeObjectAtIndex:[indexPath row]];
+    [tableView reloadData];
 }
 
 - (IBAction)addItem:(id)sender{
+    if([_inputText text].length == 0){
+        return;
+    }
     NSString* str = [_inputText text];
-    [_items addObject:str];
+    [_colors addObject:str];
     [_inputText setText:@""];
     [_tableView reloadData];
 }
 
-- (IBAction)removeItem:(id)sender{
-    NSString* str = [_inputText text];
-    
-    [_inputText setText:@""];
-    [_tableView reloadData];
+- (IBAction)EditItems:(id)sender{
+    [_tableView setEditing:![_tableView isEditing]];
+}
+
+- (IBAction)itemTextDone:(id)sender{
+    [sender resignFirstResponder];
+}
+
+- (IBAction)seeResult:(id)sender{
+    for(int i = 0; i < [_colors count]; i++){
+        UIColor* returnedColor = [self getUIColorFromString:_colors[i]];
+        if(returnedColor == NULL || [[Singleton sharedObject].colors containsObject:returnedColor]){
+            continue;
+        }
+        [[Singleton sharedObject].colors addObject:returnedColor];
+    }
+}
+
+- (UIColor*)getUIColorFromString:(NSString*)word{
+    word = [word lowercaseString];
+    word = [word stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if([word isEqualToString:@"red"]){
+        return UIColor.redColor;
+    } else if([word isEqualToString:@"blue"]){
+        return UIColor.blueColor;
+    } else if([word isEqualToString:@"green"]){
+        return UIColor.greenColor;
+    } else if([word isEqualToString:@"yellow"]){
+        return UIColor.yellowColor;
+    } else if([word isEqualToString:@"orange"]){
+        return UIColor.orangeColor;
+    } else if([word isEqualToString:@"purple"]){
+        return UIColor.purpleColor;
+    } else if([word isEqualToString:@"black"]){
+        return UIColor.blackColor;
+    } else if([word isEqualToString:@"white"]){
+        return UIColor.whiteColor;
+    } else if([word isEqualToString:@"brown"]){
+        return UIColor.brownColor;
+    } else if([word isEqualToString:@"pink"]){
+        return UIColor.systemPinkColor;
+    } else if([word isEqualToString:@"gray"] || [word isEqualToString:@"grey"]){
+        return UIColor.grayColor;
+    }
+    return NULL;
 }
 
 

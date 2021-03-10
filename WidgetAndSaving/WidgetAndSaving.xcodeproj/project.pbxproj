@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FDFD02425F92155000A2141 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFD02325F92155000A2141 /* Singleton.m */; };
+		4FDFD02D25F92C85000A2141 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFD02C25F92C85000A2141 /* ViewController2.m */; };
 		4FFDD79E25F67A74000D4691 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDD79D25F67A74000D4691 /* AppDelegate.m */; };
 		4FFDD7A125F67A74000D4691 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDD7A025F67A74000D4691 /* SceneDelegate.m */; };
 		4FFDD7A425F67A74000D4691 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDD7A325F67A74000D4691 /* ViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FDFD02325F92155000A2141 /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		4FDFD02825F9215E000A2141 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		4FDFD02C25F92C85000A2141 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		4FDFD03125F92C8E000A2141 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		4FFDD79925F67A74000D4691 /* WidgetAndSaving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetAndSaving.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFDD79C25F67A74000D4691 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FFDD79D25F67A74000D4691 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +117,10 @@
 				4FFDD7A225F67A74000D4691 /* ViewController.h */,
 				4FFDD7A325F67A74000D4691 /* ViewController.m */,
 				4FFDD7A525F67A74000D4691 /* Main.storyboard */,
+				4FDFD02325F92155000A2141 /* Singleton.m */,
+				4FDFD02C25F92C85000A2141 /* ViewController2.m */,
+				4FDFD03125F92C8E000A2141 /* ViewController2.h */,
+				4FDFD02825F9215E000A2141 /* Singleton.h */,
 				4FFDD7A825F67A74000D4691 /* Assets.xcassets */,
 				4FFDD7AA25F67A74000D4691 /* LaunchScreen.storyboard */,
 				4FFDD7AD25F67A74000D4691 /* Info.plist */,
@@ -270,6 +280,8 @@
 				4FFDD79E25F67A74000D4691 /* AppDelegate.m in Sources */,
 				4FFDD7AF25F67A74000D4691 /* main.m in Sources */,
 				4FFDD7A125F67A74000D4691 /* SceneDelegate.m in Sources */,
+				4FDFD02425F92155000A2141 /* Singleton.m in Sources */,
+				4FDFD02D25F92C85000A2141 /* ViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

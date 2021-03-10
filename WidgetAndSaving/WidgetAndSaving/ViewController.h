@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) IBOutlet UITableView* tableView;
 
-@property (nonatomic, strong) NSMutableArray* items;
+@property (nonatomic, strong) NSMutableArray* colors;
 
 @property (nonatomic, strong) IBOutlet UITextField* inputText;
 
