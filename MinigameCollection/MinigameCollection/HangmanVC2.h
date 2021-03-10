@@ -14,7 +14,6 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *Description;
 
-
 @end
 
 

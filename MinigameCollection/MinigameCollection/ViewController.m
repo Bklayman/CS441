@@ -16,6 +16,7 @@
 
 NSMutableArray* hangmanLetterIndices;
 int misses;
+int hits;
 NSString* wordToGuess;
 
 - (UIImageView*)getUIImage:(int)index{ //Returns the UIImage dash at the index provided
@@ -229,25 +230,54 @@ NSString* wordToGuess;
     if(charGuessed < 'a' || charGuessed > 'z'){
         return;
     }
-    NSMutableArray* letterPlaces;
+    NSMutableArray* letterPlaces = [[NSMutableArray alloc] init];
+    BOOL valid = TRUE;
     for(int i = 0; i < wordToGuess.length; i++){
         if([wordToGuess characterAtIndex:i] == charGuessed){
-            [letterPlaces addObject:[NSNumber numberWithInt:i]]; //Not adding to letterPlaces. count is 0 after reaching here
+            [letterPlaces addObject:[NSNumber numberWithInt:i]];
         }
     }
-    if(letterPlaces.count == 0){
+    if(!valid){
+        [Singleton sharedObject].validAnswer = FALSE;
+        [Singleton sharedObject].guess = charGuessed;
+        misses++;
+        [self placeBody];
+    } else if(letterPlaces.count == 0){
         [Singleton sharedObject].correctAnswer = FALSE;
+        [Singleton sharedObject].validAnswer = TRUE;
+        misses++;
+        [self placeBody];
     } else {
+        [Singleton sharedObject].validAnswer = TRUE;
         [Singleton sharedObject].correctAnswer = TRUE;
         [Singleton sharedObject].numFound = (int) letterPlaces.count;
         [Singleton sharedObject].guess = charGuessed;
+        hits+= letterPlaces.count;
         [self placeLetters:letterPlaces];
+        if(hits == wordToGuess.length){
+            [self winGame];
+        }
     }
+}
+
+- (void)placeBody{
+    //TODO Add body part
+    if(misses == 6){ //Or whatever the max missses will be
+        [self gameOver];
+    }
+}
+
+- (void)gameOver{
+    //TODO
+}
+
+- (void)winGame{
+    //TODO
 }
 
 - (void)placeLetters:(NSMutableArray*)letterPlaces{
     for(int i = 0; i < [letterPlaces count]; i++){
-        int curLabelIndex = (int) letterPlaces[i];
+        int curLabelIndex = [letterPlaces[i] intValue];
         UILabel* curLabel = hangmanLetterIndices[curLabelIndex];
         curLabel.text = [NSString stringWithFormat:@"%c", [Singleton sharedObject].guess];
     }

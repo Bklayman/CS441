@@ -23,6 +23,7 @@
     if(self = [super init]){
         self.gaveAnswer = FALSE;
         self.correctAnswer = FALSE;
+        self.validAnswer = TRUE;
     }
     return self;
 }
