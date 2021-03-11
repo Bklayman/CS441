@@ -22,18 +22,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMh-Re-OLT">
-                                <rect key="frame" x="14" y="73" width="90" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="See Result"/>
-                                <connections>
-                                    <action selector="seeResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ml-d0-06c"/>
-                                    <segue destination="Me3-zz-e6g" kind="popoverPresentation" popoverAnchorView="cMh-Re-OLT" id="A3s-hw-Pop">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qx0-E6-dwD">
                                 <rect key="frame" x="262" y="87" width="84" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,6 +43,26 @@
                                 <state key="normal" title="Add Item"/>
                                 <connections>
                                     <action selector="addItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cAI-y8-y2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02d-tR-q2O">
+                                <rect key="frame" x="6" y="88" width="114" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Check Colors"/>
+                                <connections>
+                                    <action selector="checkColorsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1q-uo-iTI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMh-Re-OLT">
+                                <rect key="frame" x="16" y="55" width="90" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="See Result"/>
+                                <connections>
+                                    <segue destination="Me3-zz-e6g" kind="popoverPresentation" popoverAnchorView="cMh-Re-OLT" id="A3s-hw-Pop">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,6 +169,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <size key="freeformSize" width="375" height="860"/>
+                    <connections>
+                        <outlet property="Th" destination="kVT-Ta-Dwj" id="dfH-TV-F8f"/>
+                        <outlet property="es" destination="rj5-b2-bSi" id="yCE-9E-VVY"/>
+                        <outlet property="fi" destination="cbg-GK-DIZ" id="oMb-T2-IPf"/>
+                        <outlet property="is" destination="Cj6-3M-Xk4" id="P5I-Lq-3ni"/>
+                        <outlet property="is2" destination="uei-Bc-NqB" id="CQd-XF-M41"/>
+                        <outlet property="l_r" destination="LgP-Vi-7G1" id="Rje-8x-l9I"/>
+                        <outlet property="na" destination="cTf-uJ-Pxt" id="ats-r4-Nw3"/>
+                        <outlet property="tEnd" destination="dN9-Jg-YPF" id="Q23-1s-srW"/>
+                        <outlet property="ul" destination="e7G-dC-G1P" id="unW-jW-l5z"/>
+                        <outlet property="ur" destination="k4j-KZ-6i0" id="BBd-UK-OAd"/>
+                        <outlet property="yo" destination="NgY-SE-LNx" id="A8M-Gw-Ngv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAc-AY-3tw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

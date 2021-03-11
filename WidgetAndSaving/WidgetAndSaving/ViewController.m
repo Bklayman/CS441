@@ -57,7 +57,7 @@
     [sender resignFirstResponder];
 }
 
-- (IBAction)seeResult:(id)sender{
+- (IBAction)checkColorsClicked:(id)sender{
     for(int i = 0; i < [_colors count]; i++){
         UIColor* returnedColor = [self getUIColorFromString:_colors[i]];
         if(returnedColor == NULL || [[Singleton sharedObject].colors containsObject:returnedColor]){
