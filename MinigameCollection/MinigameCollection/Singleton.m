@@ -24,6 +24,8 @@
         self.gaveAnswer = FALSE;
         self.correctAnswer = FALSE;
         self.validAnswer = TRUE;
+        self.gameOver = FALSE;
+        self.winGame = FALSE;
     }
     return self;
 }

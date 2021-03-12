@@ -267,9 +267,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="textBoxClicked:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="zZk-sU-QXh"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiD-Bn-pRg">
                                 <rect key="frame" x="278" y="496" width="54" height="35"/>
@@ -279,6 +276,15 @@
                                 <connections>
                                     <action selector="hangmanGuessButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFc-lc-Bhi"/>
                                     <segue destination="Oba-Ey-ufg" kind="show" id="q1h-Lk-odX"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tys-a1-rmT">
+                                <rect key="frame" x="104" y="732" width="180" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgainClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOr-Nf-CtI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -332,6 +338,7 @@
                         <outlet property="Letter7" destination="c9E-TK-iTM" id="yud-sa-YX1"/>
                         <outlet property="Letter8" destination="ZEJ-eM-waW" id="YE6-Hn-IQ2"/>
                         <outlet property="Letter9" destination="DP9-Wk-O1e" id="IG0-Hf-3AX"/>
+                        <outlet property="PlayAgainButton" destination="Tys-a1-rmT" id="yWB-TY-fha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

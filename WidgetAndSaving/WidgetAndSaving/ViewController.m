@@ -35,7 +35,9 @@
 }
 
 - (void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    NSLog(@"%d", [_colors count]);
     [_colors removeObjectAtIndex:[indexPath row]];
+    NSLog(@"%d", [_colors count]);
     [tableView reloadData];
 }
 
@@ -58,6 +60,7 @@
 }
 
 - (IBAction)checkColorsClicked:(id)sender{
+    NSLog(@"%d", [_colors count]);
     for(int i = 0; i < [_colors count]; i++){
         UIColor* returnedColor = [self getUIColorFromString:_colors[i]];
         if(returnedColor == NULL || [[Singleton sharedObject].colors containsObject:returnedColor]){

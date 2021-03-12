@@ -18,6 +18,7 @@ NSMutableArray* hangmanLetterIndices;
 int misses;
 int hits;
 NSString* wordToGuess;
+//TODO expand labels to fit p and q
 
 - (UIImageView*)getUIImage:(int)index{ //Returns the UIImage dash at the index provided
     index++;
@@ -215,6 +216,12 @@ NSString* wordToGuess;
     misses = 0;
     int chosenWordIndex = arc4random_uniform(10000);
     wordToGuess = hangmanWordsArray[chosenWordIndex]; //Player guesses this word
+    [Singleton sharedObject].wordToGuess = wordToGuess;
+    [Singleton sharedObject].gameOver = FALSE;
+    [Singleton sharedObject].winGame = FALSE;
+    misses = 0;
+    hits = 0;
+    [hangmanLetterIndices removeAllObjects];
     NSLog(@"%@", wordToGuess);
     hangmanLetterIndices = [self showNeededElements:wordToGuess.length];
 }
@@ -269,10 +276,14 @@ NSString* wordToGuess;
 
 - (void)gameOver{
     //TODO
+    [Singleton sharedObject].gameOver = TRUE;
+    _PlayAgainButton.hidden = FALSE;
 }
 
 - (void)winGame{
     //TODO
+    [Singleton sharedObject].winGame = TRUE;
+    _PlayAgainButton.hidden = FALSE;
 }
 
 - (void)placeLetters:(NSMutableArray*)letterPlaces{
@@ -283,16 +294,19 @@ NSString* wordToGuess;
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (NSArray*)getHangmanWordsArray{
     NSString* hangmanWordListPath = [[NSBundle mainBundle] pathForResource:@"wordlist" ofType:@"txt"];
     NSString* loadedWord = [NSString stringWithContentsOfFile:hangmanWordListPath               encoding:NSUTF8StringEncoding
         error:NULL];
     NSArray* hangmanWordsArray = [loadedWord componentsSeparatedByString:@"\n"];
+    return hangmanWordsArray;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     [_Guess addTarget:self action:@selector(guessTextDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
     
-    //TODO Main Menu for Choosing which Game to Play
+    NSArray* hangmanWordsArray = [self getHangmanWordsArray];
     [self playHangman:hangmanWordsArray];
 }
 
@@ -300,8 +314,9 @@ NSString* wordToGuess;
     [sender resignFirstResponder];
 }
 
-- (IBAction)textBoxClicked:(id)sender{
-    _ExitButton.hidden = FALSE;
+- (IBAction)playAgainClicked:(id)sender{
+    [self playHangman:[self getHangmanWordsArray]];
+    _PlayAgainButton.hidden = TRUE;
 }
 
 @end

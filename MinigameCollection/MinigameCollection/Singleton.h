@@ -17,5 +17,8 @@
 @property char guess;
 @property BOOL gaveAnswer;
 @property BOOL validAnswer;
+@property NSString* wordToGuess;
+@property BOOL gameOver;
+@property BOOL winGame;
 
 @end
