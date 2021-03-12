@@ -102,7 +102,6 @@
     for(int i = 0; i < [_colors count]; i++){
         saveData = [NSString stringWithFormat:@"%@%@\n", saveData, _colors[i]];
     }
-    NSLog(saveData);
     [[NSUserDefaults standardUserDefaults] setObject:saveData forKey:@"saveData"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -110,7 +109,6 @@
 - (IBAction)loadClicked:(id)sender{
     [_colors removeAllObjects];
     NSString* saveData = [[NSUserDefaults standardUserDefaults] stringForKey:@"saveData"];
-    NSLog(saveData);
     NSArray* lines = [saveData componentsSeparatedByString:@"\n"];
     for(int i = 0; i < [lines count]; i++){
         [_colors addObject:lines[i]];
