@@ -35,9 +35,7 @@
 }
 
 - (void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    NSLog(@"%d", [_colors count]);
     [_colors removeObjectAtIndex:[indexPath row]];
-    NSLog(@"%d", [_colors count]);
     [tableView reloadData];
 }
 
@@ -60,7 +58,7 @@
 }
 
 - (IBAction)checkColorsClicked:(id)sender{
-    NSLog(@"%d", [_colors count]);
+    [[Singleton sharedObject].colors removeAllObjects];
     for(int i = 0; i < [_colors count]; i++){
         UIColor* returnedColor = [self getUIColorFromString:_colors[i]];
         if(returnedColor == NULL || [[Singleton sharedObject].colors containsObject:returnedColor]){
@@ -97,6 +95,27 @@
         return UIColor.grayColor;
     }
     return NULL;
+}
+
+- (IBAction)saveClicked:(id)sender{
+    NSString* saveData = @"";
+    for(int i = 0; i < [_colors count]; i++){
+        saveData = [NSString stringWithFormat:@"%@%@\n", saveData, _colors[i]];
+    }
+    NSLog(saveData);
+    [[NSUserDefaults standardUserDefaults] setObject:saveData forKey:@"saveData"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (IBAction)loadClicked:(id)sender{
+    [_colors removeAllObjects];
+    NSString* saveData = [[NSUserDefaults standardUserDefaults] stringForKey:@"saveData"];
+    NSLog(saveData);
+    NSArray* lines = [saveData componentsSeparatedByString:@"\n"];
+    for(int i = 0; i < [lines count]; i++){
+        [_colors addObject:lines[i]];
+    }
+    [_tableView reloadData];
 }
 
 
