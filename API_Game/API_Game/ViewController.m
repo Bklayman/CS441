@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _motionManager = [[CMMotionManager alloc] init];
+    [self moveBlock];
     [self startGyroscope];
 }
 
@@ -54,8 +55,19 @@
     _player.center = CGPointMake(nextX, nextY);
 }
 
+- (void)moveBlock{
+    _block.center = CGPointMake(arc4random_uniform(250) + 50, arc4random_uniform(500) + 200);
+    while(fabs(_block.center.x - _player.center.x) < 100 && fabs(_block.center.y - _player.center.y) < 100){
+        _block.center = CGPointMake(arc4random_uniform(250) + 50, arc4random_uniform(500) + 200);
+    }
+}
+
 - (void)checkForPoint{
-    //TODO
+    if(fabs(_block.center.x - _player.center.x) < 50 && fabs(_block.center.y - _player.center.y) < 50){
+        _points++;
+        _numPoints.text = [NSString stringWithFormat:@"%d", _points];
+        [self moveBlock];
+    }
 }
 
 //Gotten from https://stackoverflow.com/questions/7135934/ios-gyroscope-api
