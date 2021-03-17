@@ -18,19 +18,6 @@
     [super viewDidLoad];
     _motionManager = [[CMMotionManager alloc] init];
     [self startGyroscope];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [self runGame];
-    });
-}
-
-- (void)runGame {
-    while(TRUE){
-        int xChange = 0;
-        int yChange = 0;
-        [self movePlayer:xChange :yChange];
-        [self checkForPoint];
-        [NSThread sleepForTimeInterval:.5];
-    }
 }
 
 - (void)movePlayer:(int)x :(int)y {
@@ -39,27 +26,27 @@
     int nextX = 0;
     int nextY = 0;
     if(x < 0){
-        if(curXPos + x < 20){
-            nextX = 20;
+        if(curXPos + x < 50){
+            nextX = 50;
         } else {
             nextX = curXPos + x;
         }
     } else {
-        if(curXPos + x > 355){
-            nextX = 255;
+        if(curXPos + x > 300){
+            nextX = 300;
         } else {
             nextX = curXPos + x;
         }
     }
     if(y < 0){
-        if(curYPos + y < 60){
-            nextY = 60;
+        if(curYPos + y < 200){
+            nextY = 200;
         } else {
             nextY = curYPos + y;
         }
     } else {
-        if(curYPos + y > 800){
-            nextY = 800;
+        if(curYPos + y > 700){
+            nextY = 700;
         } else {
             nextY = curYPos + y;
         }
@@ -77,12 +64,10 @@
         if([_motionManager isGyroActive] == NO){
             [_motionManager setGyroUpdateInterval:1/6]; //Update 6times / 1second
             [_motionManager startGyroUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMGyroData * _Nullable gyroData, NSError * _Nullable error) {
-                NSString* x = [[NSString alloc] initWithFormat:@"%.02f", gyroData.rotationRate.x];
-                self.gyroX = x;
-                NSString* y = [[NSString alloc] initWithFormat:@"%.02f", gyroData.rotationRate.y];
-                self.gyroY = y;
-                NSString* z = [[NSString alloc] initWithFormat:@"%.02f", gyroData.rotationRate.z];
-                self.gyroZ = z;
+                int xChange = [[[NSString alloc] initWithFormat:@"%.02f", gyroData.rotationRate.y] floatValue] * 3;
+                int yChange = [[[NSString alloc] initWithFormat:@"%.02f", gyroData.rotationRate.x] floatValue] * 3;
+                [self movePlayer:xChange :yChange];
+                [self checkForPoint];
             }];
         }
     } else {
@@ -90,7 +75,23 @@
     }
 }
 
-- (NSUInteger) supportedInterfaceOrientations {
+- (IBAction)centerButtonClicked:(id)sender{
+    _player.center = CGPointMake(175, 350);
+}
+
+- (IBAction)saveButtonClicked:(id)sender{
+    NSString* saveData = [NSString stringWithFormat:@"%@", _numPoints.text];
+    [[NSUserDefaults standardUserDefaults] setObject:saveData forKey:@"saveData"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (IBAction)loadButtonClicked:(id)sender{
+    NSString* saveData = [[NSUserDefaults standardUserDefaults] stringForKey:@"saveData"];
+    _numPoints.text = saveData;
+    _points = [saveData intValue];
+}
+
+- (enum UIInterfaceOrientationMask) supportedInterfaceOrientations {
     // Return a bitmask of supported orientations. If you need more,
     // use bitwise or (see the commented return).
     return UIInterfaceOrientationMaskPortrait;
