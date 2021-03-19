@@ -10,6 +10,10 @@
 		4F37D7DC25E00B4D00848A33 /* dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F37D7DB25E00B4D00848A33 /* dash.png */; };
 		4F73665725E9415600602C52 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F73665625E9415600602C52 /* Singleton.m */; };
 		4F73666025E9456200602C52 /* HangmanVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F73665F25E9456200602C52 /* HangmanVC2.m */; };
+		4FCFD0522604ECB60024B067 /* rockPaperScissors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFD0512604ECB60024B067 /* rockPaperScissors.m */; };
+		4FCFD05B2604EDED0024B067 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FCFD05A2604EDED0024B067 /* rock.png */; };
+		4FCFD0602604EDF40024B067 /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FCFD05F2604EDF40024B067 /* paper.png */; };
+		4FCFD0652604EDFA0024B067 /* scissors.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FCFD0642604EDFA0024B067 /* scissors.png */; };
 		4FE4955325DD60BB00228CEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4955225DD60BB00228CEE /* AppDelegate.m */; };
 		4FE4955625DD60BB00228CEE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4955525DD60BB00228CEE /* SceneDelegate.m */; };
 		4FE4955925DD60BB00228CEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4955825DD60BB00228CEE /* ViewController.m */; };
@@ -46,6 +50,11 @@
 		4F73665625E9415600602C52 /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		4F73665E25E9455300602C52 /* HangmanVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HangmanVC2.h; sourceTree = "<group>"; };
 		4F73665F25E9456200602C52 /* HangmanVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangmanVC2.m; sourceTree = "<group>"; };
+		4FCFD0512604ECB60024B067 /* rockPaperScissors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rockPaperScissors.m; sourceTree = "<group>"; };
+		4FCFD0562604ECBF0024B067 /* rockPaperScissors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rockPaperScissors.h; sourceTree = "<group>"; };
+		4FCFD05A2604EDED0024B067 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rock.png; path = ../../../../../../../../Downloads/rock.png; sourceTree = "<group>"; };
+		4FCFD05F2604EDF40024B067 /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = paper.png; path = ../../../../../../../../Downloads/paper.png; sourceTree = "<group>"; };
+		4FCFD0642604EDFA0024B067 /* scissors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scissors.png; path = ../../../../../../../../Downloads/scissors.png; sourceTree = "<group>"; };
 		4FE4954E25DD60BB00228CEE /* MinigameCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinigameCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE4955125DD60BB00228CEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FE4955225DD60BB00228CEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,10 +135,15 @@
 				4F73665625E9415600602C52 /* Singleton.m */,
 				4FE4955825DD60BB00228CEE /* ViewController.m */,
 				4FE4955A25DD60BB00228CEE /* Main.storyboard */,
+				4FCFD0512604ECB60024B067 /* rockPaperScissors.m */,
+				4FCFD0562604ECBF0024B067 /* rockPaperScissors.h */,
 				4F73665E25E9455300602C52 /* HangmanVC2.h */,
 				4F73665F25E9456200602C52 /* HangmanVC2.m */,
 				4FE495A325DD6BEE00228CEE /* hangmanBase (1).png */,
 				4F37D7DB25E00B4D00848A33 /* dash.png */,
+				4FCFD05A2604EDED0024B067 /* rock.png */,
+				4FCFD05F2604EDF40024B067 /* paper.png */,
+				4FCFD0642604EDFA0024B067 /* scissors.png */,
 				4FE4955D25DD60BC00228CEE /* Assets.xcassets */,
 				4FE4955F25DD60BC00228CEE /* LaunchScreen.storyboard */,
 				4FE4956225DD60BC00228CEE /* Info.plist */,
@@ -261,9 +275,12 @@
 				4FE4956125DD60BC00228CEE /* LaunchScreen.storyboard in Resources */,
 				4FE495A425DD6BEE00228CEE /* hangmanBase (1).png in Resources */,
 				4FE4955E25DD60BC00228CEE /* Assets.xcassets in Resources */,
+				4FCFD05B2604EDED0024B067 /* rock.png in Resources */,
+				4FCFD0602604EDF40024B067 /* paper.png in Resources */,
 				4FE495A925DD6E1700228CEE /* wordlist.txt in Resources */,
 				4FE4955C25DD60BB00228CEE /* Main.storyboard in Resources */,
 				4F37D7DC25E00B4D00848A33 /* dash.png in Resources */,
+				4FCFD0652604EDFA0024B067 /* scissors.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +311,7 @@
 				4FE4955625DD60BB00228CEE /* SceneDelegate.m in Sources */,
 				4F73666025E9456200602C52 /* HangmanVC2.m in Sources */,
 				4F73665725E9415600602C52 /* Singleton.m in Sources */,
+				4FCFD0522604ECB60024B067 /* rockPaperScissors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -427,10 +427,10 @@
             </objects>
             <point key="canvasLocation" x="-960" y="77"/>
         </scene>
-        <!--View Controller-->
+        <!--Rock Paper Scissors-->
         <scene sceneID="lqX-IP-68g">
             <objects>
-                <viewController id="T64-jr-The" sceneMemberID="viewController">
+                <viewController id="T64-jr-The" customClass="rockPaperScissors" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LEE-nd-7wN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -444,15 +444,83 @@
                                     <segue destination="sEg-90-BYX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="2ru-YR-1r8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4o-oQ-EIA">
+                                <rect key="frame" x="145" y="522" width="86" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Rock!"/>
+                                <connections>
+                                    <action selector="rockPressed:" destination="T64-jr-The" eventType="touchUpInside" id="3Ob-qK-7zh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cn7-18-R8r">
+                                <rect key="frame" x="57" y="584" width="96" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Paper!"/>
+                                <connections>
+                                    <action selector="paperPressed:" destination="T64-jr-The" eventType="touchUpInside" id="rTB-fT-Yuz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42y-Jb-FNl">
+                                <rect key="frame" x="191" y="584" width="137" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Scissors!"/>
+                                <connections>
+                                    <action selector="scissorsPressed:" destination="T64-jr-The" eventType="touchUpInside" id="hjL-ES-Tcd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XK6-Fn-KQS">
+                                <rect key="frame" x="16" y="174" width="74" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQ1-fb-J2r">
+                                <rect key="frame" x="86" y="112" width="129" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTu-hp-1PA">
+                                <rect key="frame" x="223" y="112" width="28" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opponent:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpz-aF-ocU">
+                                <rect key="frame" x="16" y="325" width="182" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="rock.png" translatesAutoresizingMaskIntoConstraints="NO" id="vbD-7s-vPb">
+                                <rect key="frame" x="132" y="211" width="110" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="rock.png" translatesAutoresizingMaskIntoConstraints="NO" id="feF-sW-8sd">
+                                <rect key="frame" x="132" y="381" width="110" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a2w-kc-f9R"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <size key="freeformSize" width="375" height="860"/>
+                    <connections>
+                        <outlet property="numPoints" destination="CTu-hp-1PA" id="Qm6-DW-ooi"/>
+                        <outlet property="opponentHand" destination="feF-sW-8sd" id="LcX-rK-hHz"/>
+                        <outlet property="playerHand" destination="vbD-7s-vPb" id="y1s-RS-voQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBN-o8-kmE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="-649"/>
+            <point key="canvasLocation" x="461.59420289855075" y="-649.55357142857144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -461,6 +529,7 @@
     <resources>
         <image name="dash.png" width="200" height="200"/>
         <image name="hangmanBase (1).png" width="256" height="256"/>
+        <image name="rock.png" width="200" height="200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

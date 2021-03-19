@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="block.png" translatesAutoresizingMaskIntoConstraints="NO" id="wQS-Zi-D8n">
-                                <rect key="frame" x="160" y="271" width="54" height="62"/>
+                                <rect key="frame" x="72" y="210" width="54" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -66,12 +66,12 @@
                                     <action selector="loadButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4my-26-UQf"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="poison.png" translatesAutoresizingMaskIntoConstraints="NO" id="uEn-RZ-e9N">
-                                <rect key="frame" x="230" y="279" width="30" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="poison.png" translatesAutoresizingMaskIntoConstraints="NO" id="vlX-EQ-Ix7">
                                 <rect key="frame" x="281" y="279" width="30" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="poison.png" translatesAutoresizingMaskIntoConstraints="NO" id="uEn-RZ-e9N">
+                                <rect key="frame" x="150" y="522" width="30" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
