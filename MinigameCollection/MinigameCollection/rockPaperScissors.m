@@ -18,34 +18,40 @@
     [super viewDidLoad];
     _playerHand.hidden = TRUE;
     _opponentHand.hidden = TRUE;
+    _points = 0;
     [self setAI];
 }
 
 - (void)setAI{
-    //TODO
+    _AIIndex = arc4random_uniform(4);
 }
 
 - (IBAction)rockPressed:(id)sender{
-    //TODO
+    _playerChoice = 0;
     [self opponentChoose];
 }
 
 - (IBAction)paperPressed:(id)sender{
-    //TODO
+    _playerChoice = 1;
     [self opponentChoose];
 }
 
 - (IBAction)scissorsPressed:(id)sender{
-    //TODO
+    _playerChoice = 2;
     [self opponentChoose];
 }
 
 - (void)opponentChoose{
     //TODO
+    [self checkResult];
 }
 
-- (void)chooseAI{
-    //TODO
+- (void)checkResult{
+    if((_playerChoice == 0 && _opponentChoice == 1) || (_playerChoice == 1 && _opponentChoice == 2) || (_playerChoice == 2 && _opponentChoice == 0)){
+        _points--;
+    } else if((_playerChoice == 1 && _opponentChoice == 0) || (_playerChoice == 2 && _opponentChoice == 1) || (_playerChoice == 0 && _opponentChoice == 2)){
+        _points++;
+    }
 }
 
 @end

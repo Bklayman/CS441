@@ -17,9 +17,10 @@
 
 @property (nonatomic, strong) IBOutlet UILabel* numPoints;
 
-@property int AIIndex;
-@property int playerChoice;
-@property int opponentChoice;
+@property int AIIndex; //Not set yet
+@property int playerChoice; //0 -> rock, 1 -> paper, 2 -> scissors
+@property int opponentChoice; //0 -> rock, 1 -> paper, 2 -> scissors
+@property int points;
 
 @end
 
