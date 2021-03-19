@@ -18,6 +18,7 @@
 		4F6AEADD2601480C0083CB01 /* API_GameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6AEADC2601480C0083CB01 /* API_GameUITests.m */; };
 		4F6AEAEE260148D40083CB01 /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6AEAED260148D40083CB01 /* block.png */; };
 		4F6AEAF3260149FA0083CB01 /* pacman.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4F6AEAF2260149FA0083CB01 /* pacman.jpeg */; };
+		4FCFD04A2604E0FB0024B067 /* poison.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FCFD0492604E0FB0024B067 /* poison.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		4F6AEADE2601480C0083CB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F6AEAED260148D40083CB01 /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = block.png; path = ../../../../../../../../Downloads/block.png; sourceTree = "<group>"; };
 		4F6AEAF2260149FA0083CB01 /* pacman.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pacman.jpeg; path = ../../../../../../../../Downloads/pacman.jpeg; sourceTree = "<group>"; };
+		4FCFD0492604E0FB0024B067 /* poison.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poison.png; path = ../../../../../../../../Downloads/poison.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				4F6AEAC72601480B0083CB01 /* main.m */,
 				4F6AEAED260148D40083CB01 /* block.png */,
 				4F6AEAF2260149FA0083CB01 /* pacman.jpeg */,
+				4FCFD0492604E0FB0024B067 /* poison.png */,
 			);
 			path = API_Game;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				4F6AEAC22601480B0083CB01 /* Assets.xcassets in Resources */,
 				4F6AEAC02601480B0083CB01 /* Main.storyboard in Resources */,
 				4F6AEAEE260148D40083CB01 /* block.png in Resources */,
+				4FCFD04A2604E0FB0024B067 /* poison.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

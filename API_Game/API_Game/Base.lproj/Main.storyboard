@@ -66,6 +66,14 @@
                                     <action selector="loadButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4my-26-UQf"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="poison.png" translatesAutoresizingMaskIntoConstraints="NO" id="uEn-RZ-e9N">
+                                <rect key="frame" x="230" y="279" width="30" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="poison.png" translatesAutoresizingMaskIntoConstraints="NO" id="vlX-EQ-Ix7">
+                                <rect key="frame" x="281" y="279" width="30" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,6 +83,8 @@
                         <outlet property="block" destination="wQS-Zi-D8n" id="euX-AF-FuD"/>
                         <outlet property="numPoints" destination="Gze-F5-oGI" id="TRf-Bs-5wZ"/>
                         <outlet property="player" destination="f7S-P2-fqN" id="r0V-IB-Wg5"/>
+                        <outlet property="poison1" destination="uEn-RZ-e9N" id="uk6-2C-deh"/>
+                        <outlet property="poison2" destination="vlX-EQ-Ix7" id="I6b-Vg-gC6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,6 +95,7 @@
     <resources>
         <image name="block.png" width="591.3599853515625" height="440.16000366210938"/>
         <image name="pacman.jpeg" width="184" height="273"/>
+        <image name="poison.png" width="640" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

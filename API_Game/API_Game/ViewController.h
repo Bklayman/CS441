@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView* block;
 @property (nonatomic, strong) IBOutlet UIImageView* player;
+@property (nonatomic, strong) IBOutlet UIImageView* poison1;
+@property (nonatomic, strong) IBOutlet UIImageView* poison2;
 
 @property CMMotionManager* motionManager;
 
