@@ -224,6 +224,12 @@ NSString* wordToGuess;
     [hangmanLetterIndices removeAllObjects];
     NSLog(@"%@", wordToGuess);
     hangmanLetterIndices = [self showNeededElements:wordToGuess.length];
+    _bodyLeftArm.hidden = TRUE;
+    _bodyLeftLeg.hidden = TRUE;
+    _bodyRightArm.hidden = TRUE;
+    _bodyRightLeg.hidden = TRUE;
+    _bodyHead.hidden = TRUE;
+    _bodyTorso.hidden = TRUE;
 }
 
 - (IBAction)hangmanGuessButtonClicked:(id)sender{ //Takes whatever is entered by the player, checks the input, and if the input is valid, checks the chosen word for the guessed letter (adding a miss if it is wrong)
@@ -268,20 +274,35 @@ NSString* wordToGuess;
 }
 
 - (void)placeBody{
-    //TODO Add body part
-    if(misses == 6){ //Or whatever the max missses will be
-        [self gameOver];
+    switch(misses){
+        case 1:
+            _bodyHead.hidden = FALSE;
+            break;
+        case 2:
+            _bodyTorso.hidden = FALSE;
+            break;
+        case 3:
+            _bodyLeftArm.hidden = FALSE;
+            break;
+        case 4:
+            _bodyRightArm.hidden = FALSE;
+            break;
+        case 5:
+            _bodyLeftLeg.hidden = FALSE;
+            break;
+        case 6:
+            _bodyRightLeg.hidden = FALSE;
+            [self gameOver];
+            break;
     }
 }
 
 - (void)gameOver{
-    //TODO
     [Singleton sharedObject].gameOver = TRUE;
     _PlayAgainButton.hidden = FALSE;
 }
 
 - (void)winGame{
-    //TODO
     [Singleton sharedObject].winGame = TRUE;
     _PlayAgainButton.hidden = FALSE;
 }
@@ -305,6 +326,12 @@ NSString* wordToGuess;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [_Guess addTarget:self action:@selector(guessTextDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    UIImage* leftPartsSource = [UIImage imageNamed:@"leftParts.png"];
+    _bodyLeftArm.image = [UIImage imageWithCGImage:leftPartsSource.CGImage
+                          scale:1 orientation:UIImageOrientationUpMirrored];
+    _bodyLeftLeg.image = [UIImage imageWithCGImage:leftPartsSource.CGImage
+                          scale:1 orientation:UIImageOrientationUpMirrored];
     
     NSArray* hangmanWordsArray = [self getHangmanWordsArray];
     [self playHangman:hangmanWordsArray];

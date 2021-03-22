@@ -58,5 +58,12 @@
 
 @property (nonatomic, strong) IBOutlet UIButton *PlayAgainButton;
 
+@property (nonatomic, strong) IBOutlet UIImageView *bodyHead;
+@property (nonatomic, strong) IBOutlet UIImageView *bodyTorso;
+@property (nonatomic, strong) IBOutlet UIImageView *bodyLeftArm;
+@property (nonatomic, strong) IBOutlet UIImageView *bodyLeftLeg;
+@property (nonatomic, strong) IBOutlet UIImageView *bodyRightArm;
+@property (nonatomic, strong) IBOutlet UIImageView *bodyRightLeg;
+
 @end
 
