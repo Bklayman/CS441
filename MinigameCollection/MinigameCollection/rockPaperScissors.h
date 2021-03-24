@@ -16,8 +16,9 @@
 @property (nonatomic, strong) IBOutlet UIImageView* opponentHand;
 
 @property (nonatomic, strong) IBOutlet UILabel* numPoints;
+@property (nonatomic, strong) IBOutlet UILabel* opponentName;
 
-@property int AIIndex; //Not set yet
+@property int AIIndex; //0 -> random
 @property int playerChoice; //0 -> rock, 1 -> paper, 2 -> scissors
 @property int opponentChoice; //0 -> rock, 1 -> paper, 2 -> scissors
 @property int points;

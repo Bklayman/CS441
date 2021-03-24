@@ -489,7 +489,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Paper!"/>
                                 <connections>
-                                    <action selector="paperPressed:" destination="T64-jr-The" eventType="touchUpInside" id="rTB-fT-Yuz"/>
+                                    <action selector="paperPressed:" destination="T64-jr-The" eventType="touchUpInside" id="SzH-KG-75d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42y-Jb-FNl">
@@ -498,7 +498,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Scissors!"/>
                                 <connections>
-                                    <action selector="scissorsPressed:" destination="T64-jr-The" eventType="touchUpInside" id="hjL-ES-Tcd"/>
+                                    <action selector="scissorsPressed:" destination="T64-jr-The" eventType="touchUpInside" id="6KH-aU-j8a"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XK6-Fn-KQS">
@@ -516,7 +516,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTu-hp-1PA">
-                                <rect key="frame" x="223" y="112" width="28" height="54"/>
+                                <rect key="frame" x="223" y="112" width="121" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
@@ -545,6 +545,7 @@
                     <connections>
                         <outlet property="numPoints" destination="CTu-hp-1PA" id="Qm6-DW-ooi"/>
                         <outlet property="opponentHand" destination="feF-sW-8sd" id="LcX-rK-hHz"/>
+                        <outlet property="opponentName" destination="Dpz-aF-ocU" id="GqH-3j-GpK"/>
                         <outlet property="playerHand" destination="vbD-7s-vPb" id="y1s-RS-voQ"/>
                     </connections>
                 </viewController>
