@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="840"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Scattergories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHd-sH-9f1">
@@ -47,7 +47,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <size key="freeformSize" width="375" height="860"/>
+                    <size key="freeformSize" width="375" height="840"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,7 +58,7 @@
             <objects>
                 <viewController id="cpD-1E-2Wh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JDk-zS-spf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="806"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0f-rb-4zp">
@@ -101,18 +101,18 @@
                         <viewLayoutGuide key="safeArea" id="Xba-OR-hKz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <size key="freeformSize" width="375" height="860"/>
+                    <size key="freeformSize" width="375" height="840"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RqW-sJ-j3l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.20289855072474" y="-537.05357142857144"/>
+            <point key="canvasLocation" x="972" y="-538"/>
         </scene>
         <!--Player Info-->
         <scene sceneID="iwC-Bs-5q4">
             <objects>
                 <viewController id="0TV-NK-6sh" customClass="PlayerInfo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1xh-8U-bg5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="840"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1Q-3y-jIu">
@@ -161,37 +161,40 @@
                                 <rect key="frame" x="163" y="241" width="177" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="nameTextDone:" destination="0TV-NK-6sh" eventType="editingDidEnd" id="aha-zP-4Gf"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-ah-00k">
                                 <rect key="frame" x="163" y="330" width="177" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kh6-n9-laj">
                                 <rect key="frame" x="163" y="413" width="177" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6v-Xl-ENW">
                                 <rect key="frame" x="163" y="511" width="177" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJH-Jd-kTT">
                                 <rect key="frame" x="163" y="600" width="177" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FuC-2I-hcN">
                                 <rect key="frame" x="163" y="690" width="177" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Player Names" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiW-H5-lDS">
                                 <rect key="frame" x="29" y="85" width="316" height="46"/>
@@ -232,21 +235,116 @@
                                 <rect key="frame" x="4" y="489" width="49" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqk-pq-Xs0">
+                                <rect key="frame" x="83" y="744" width="209" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Begin Game"/>
+                                <connections>
+                                    <segue destination="YAw-TX-rJW" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="4eP-we-TSX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9h4-eU-8JG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <size key="freeformSize" width="375" height="860"/>
+                    <size key="freeformSize" width="375" height="840"/>
                     <connections>
+                        <outlet property="check3" destination="hcR-GR-Xl7" id="81m-lX-BeU"/>
+                        <outlet property="check4" destination="A4C-M4-5Kx" id="Y6q-MA-r9W"/>
+                        <outlet property="check5" destination="s2M-KJ-XJP" id="kxH-Gm-DjS"/>
+                        <outlet property="check6" destination="Ckr-VI-U19" id="nUg-8L-7lg"/>
                         <outlet property="checkBox3" destination="YIT-U4-IyX" id="fa5-vA-C4W"/>
                         <outlet property="checkBox4" destination="h2A-4P-vMr" id="DKe-z5-E1k"/>
                         <outlet property="checkBox5" destination="pOa-O0-wEh" id="Dis-Ws-Z4B"/>
                         <outlet property="checkBox6" destination="YTA-pE-JQh" id="I10-Va-Lfv"/>
+                        <outlet property="player1Name" destination="kNc-lX-xeN" id="Hva-mH-LF0"/>
+                        <outlet property="player2Name" destination="jSd-ah-00k" id="Hd4-OM-OU4"/>
+                        <outlet property="player3Name" destination="Kh6-n9-laj" id="8NB-Ld-5ef"/>
+                        <outlet property="player4Name" destination="n6v-Xl-ENW" id="bSh-2U-bOd"/>
+                        <outlet property="player5Name" destination="PJH-Jd-kTT" id="TqP-5P-Kbd"/>
+                        <outlet property="player6Name" destination="FuC-2I-hcN" id="jQe-lb-ddK"/>
+                        <outlet property="startGameButton" destination="gqk-pq-Xs0" id="PCm-gW-bcj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7H-Sg-wy8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942.75362318840587" y="88.392857142857139"/>
+            <point key="canvasLocation" x="972" y="88"/>
+        </scene>
+        <!--Round Presentation-->
+        <scene sceneID="j23-ey-Ifz">
+            <objects>
+                <viewController id="YAw-TX-rJW" customClass="RoundPresentation" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gsa-BI-mPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="840"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This Round's Letter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buw-BY-wJ3">
+                                <rect key="frame" x="16" y="252" width="290" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Q" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9t-kc-xoF">
+                                <rect key="frame" x="314" y="252" width="26" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This Round's Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPU-YW-kZP">
+                                <rect key="frame" x="16" y="359" width="340" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Countries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsC-4k-gfs">
+                                <rect key="frame" x="115" y="408" width="142" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAe-RT-kdH">
+                                <rect key="frame" x="54" y="504" width="266" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                <state key="normal" title="Start Round"/>
+                                <connections>
+                                    <segue destination="Bmq-H6-wQH" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="KKN-8c-Rla"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yMO-2S-xnu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="840"/>
+                    <connections>
+                        <outlet property="roundCategory" destination="xsC-4k-gfs" id="PP4-yx-9ZJ"/>
+                        <outlet property="roundLetter" destination="W9t-kc-xoF" id="NJt-hT-2IA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MpJ-u2-Jpy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808" y="88"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4BE-tl-cLb">
+            <objects>
+                <viewController id="Bmq-H6-wQH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8l-wY-3pj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RbI-b2-dZA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="860"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aum-Fb-Ex7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2679" y="88"/>
         </scene>
     </scenes>
     <resources>
