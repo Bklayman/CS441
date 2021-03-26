@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F08019F260B7B0C0004F96C /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F08019E260B7B0C0004F96C /* Singleton.m */; };
 		4F0801A8260B84270004F96C /* RoundPresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0801A7260B84270004F96C /* RoundPresentation.m */; };
+		4F98B04D260E20BC00478DF2 /* wordChoosing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98B04C260E20BC00478DF2 /* wordChoosing.m */; };
 		4FB609A42608D7A1009E258B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB609A32608D7A1009E258B /* AppDelegate.m */; };
 		4FB609A72608D7A1009E258B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB609A62608D7A1009E258B /* SceneDelegate.m */; };
 		4FB609AA2608D7A1009E258B /* PlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB609A92608D7A1009E258B /* PlayerInfo.m */; };
@@ -44,6 +45,8 @@
 		4F08019E260B7B0C0004F96C /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		4F0801A6260B841B0004F96C /* RoundPresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundPresentation.h; sourceTree = "<group>"; };
 		4F0801A7260B84270004F96C /* RoundPresentation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundPresentation.m; sourceTree = "<group>"; };
+		4F98B04B260E20B000478DF2 /* wordChoosing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wordChoosing.h; sourceTree = "<group>"; };
+		4F98B04C260E20BC00478DF2 /* wordChoosing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wordChoosing.m; sourceTree = "<group>"; };
 		4FB6099F2608D7A1009E258B /* GameProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB609A22608D7A1009E258B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FB609A32608D7A1009E258B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				4F08019D260B7AF20004F96C /* Singleton.h */,
 				4F08019E260B7B0C0004F96C /* Singleton.m */,
 				4FB609AB2608D7A1009E258B /* Main.storyboard */,
+				4F98B04B260E20B000478DF2 /* wordChoosing.h */,
+				4F98B04C260E20BC00478DF2 /* wordChoosing.m */,
 				4F0801A6260B841B0004F96C /* RoundPresentation.h */,
 				4F0801A7260B84270004F96C /* RoundPresentation.m */,
 				4FB609AE2608D7A2009E258B /* Assets.xcassets */,
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB609AA2608D7A1009E258B /* PlayerInfo.m in Sources */,
+				4F98B04D260E20BC00478DF2 /* wordChoosing.m in Sources */,
 				4FB609A42608D7A1009E258B /* AppDelegate.m in Sources */,
 				4F0801A8260B84270004F96C /* RoundPresentation.m in Sources */,
 				4FB609B52608D7A2009E258B /* main.m in Sources */,

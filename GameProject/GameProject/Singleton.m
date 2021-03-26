@@ -33,6 +33,12 @@
         _player6Name = @"";
         _roundLetter = @'Q';
         _roundCategory = @"";
+        _player1Word = @"";
+        _player2Word = @"";
+        _player3Word = @"";
+        _player4Word = @"";
+        _player5Word = @"";
+        _player6Word = @"";
     }
     return self;
 }

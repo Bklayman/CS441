@@ -24,6 +24,13 @@
 @property NSString* player5Name;
 @property NSString* player6Name;
 
+@property NSString* player1Word;
+@property NSString* player2Word;
+@property NSString* player3Word;
+@property NSString* player4Word;
+@property NSString* player5Word;
+@property NSString* player6Word;
+
 @property char roundLetter;
 @property NSString* roundCategory;
 

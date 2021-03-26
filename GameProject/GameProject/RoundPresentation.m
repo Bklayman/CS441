@@ -28,7 +28,9 @@
 }
 
 - (void)chooseCategory {
-    //TODO
+    NSArray* categories = [NSArray arrayWithObjects:@"Countries", @"People", @"Video Games", @"Animals", @"Foods", @"Drinks", @"Colors", @"Actions", @"Stores", @"Technologies", @"Apps", nil];
+    _roundCategory.text = categories[arc4random_uniform([categories count])];
+    [Singleton sharedObject].roundCategory = _roundCategory.text;
 }
 
 @end
