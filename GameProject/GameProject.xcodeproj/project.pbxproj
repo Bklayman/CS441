@@ -21,6 +21,7 @@
 		4FB609CA2608D7A2009E258B /* GameProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB609C92608D7A2009E258B /* GameProjectUITests.m */; };
 		4FB609DB2608DE97009E258B /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB609DA2608DE97009E258B /* box.png */; };
 		4FB609E02608DE9E009E258B /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB609DF2608DE9E009E258B /* check.png */; };
+		4FE974F226121BAF00D334FC /* WordChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE974F126121BAF00D334FC /* WordChecker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		4FB609CB2608D7A2009E258B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FB609DA2608DE97009E258B /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = box.png; path = ../../../../../../../../Downloads/box.png; sourceTree = "<group>"; };
 		4FB609DF2608DE9E009E258B /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check.png; path = ../../../../../../../../Downloads/check.png; sourceTree = "<group>"; };
+		4FE974F126121BAF00D334FC /* WordChecker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordChecker.m; sourceTree = "<group>"; };
+		4FE974F626121BB900D334FC /* WordChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordChecker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				4F08019D260B7AF20004F96C /* Singleton.h */,
 				4F08019E260B7B0C0004F96C /* Singleton.m */,
 				4FB609AB2608D7A1009E258B /* Main.storyboard */,
+				4FE974F126121BAF00D334FC /* WordChecker.m */,
+				4FE974F626121BB900D334FC /* WordChecker.h */,
 				4F98B04B260E20B000478DF2 /* wordChoosing.h */,
 				4F98B04C260E20BC00478DF2 /* wordChoosing.m */,
 				4F0801A6260B841B0004F96C /* RoundPresentation.h */,
@@ -290,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB609AA2608D7A1009E258B /* PlayerInfo.m in Sources */,
+				4FE974F226121BAF00D334FC /* WordChecker.m in Sources */,
 				4F98B04D260E20BC00478DF2 /* wordChoosing.m in Sources */,
 				4FB609A42608D7A1009E258B /* AppDelegate.m in Sources */,
 				4F0801A8260B84270004F96C /* RoundPresentation.m in Sources */,

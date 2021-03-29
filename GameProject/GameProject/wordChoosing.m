@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _turnOrder = [[NSMutableArray alloc] init];
     _nextScreen.hidden = TRUE;
     _submitWord.hidden = FALSE;
     [self createTurnOrder];
@@ -43,15 +44,40 @@
 
 - (void)startTurn:(int)index {
     _namePresented.text = [NSString stringWithFormat:@"%@'s Word:", [_turnOrder objectAtIndex:index]];
-    //TODO
 }
 
 - (IBAction)nextTurn:(id)sender{
     _curTurn++;
+    _enteredWord.text = [_enteredWord.text stringByReplacingOccurrencesOfString:@" " withString:@""]; //TODO Change later to only delete preceding and proceding spaces
+    [self saveWord:_enteredWord.text :_curTurn - 1];
     if(_curTurn == [_turnOrder count]){
-        
+        _nextScreen.hidden = FALSE;
+        _submitWord.hidden = TRUE;
     } else {
         [self startTurn: _curTurn];
+    }
+}
+
+- (void)saveWord:(NSString*)word :(int)index{
+    switch(index){
+        case 1:
+            [Singleton sharedObject].player1Word = word;
+            break;
+        case 2:
+            [Singleton sharedObject].player2Word = word;
+            break;
+        case 3:
+            [Singleton sharedObject].player3Word = word;
+            break;
+        case 4:
+            [Singleton sharedObject].player4Word = word;
+            break;
+        case 5:
+            [Singleton sharedObject].player5Word = word;
+            break;
+        case 6:
+            [Singleton sharedObject].player6Word = word;
+            break;
     }
 }
 

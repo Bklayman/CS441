@@ -361,10 +361,10 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtK-LG-Aav">
-                                <rect key="frame" x="55" y="593" width="264" height="73"/>
+                                <rect key="frame" x="42" y="593" width="291" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                <state key="normal" title="Next Screen"/>
+                                <state key="normal" title="Check Words"/>
                                 <connections>
                                     <segue destination="ub4-Na-ZvO" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="NXC-xb-5GM"/>
                                 </connections>
@@ -385,21 +385,92 @@
             </objects>
             <point key="canvasLocation" x="2551" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--Word Checker-->
         <scene sceneID="HbT-AX-InB">
             <objects>
-                <viewController id="ub4-Na-ZvO" sceneMemberID="viewController">
+                <viewController id="ub4-Na-ZvO" customClass="WordChecker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M8t-ze-LrI">
                         <rect key="frame" x="0.0" y="0.0" width="340" height="875"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uncheck Invalid Words and Fix Mispelled Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHr-F7-mqu">
+                                <rect key="frame" x="0.0" y="44" width="340" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="box.png" translatesAutoresizingMaskIntoConstraints="NO" id="lfI-k8-aR8">
+                                <rect key="frame" x="26" y="250" width="39" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="box.png" translatesAutoresizingMaskIntoConstraints="NO" id="uUm-RJ-mJp">
+                                <rect key="frame" x="26" y="350" width="39" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="box.png" translatesAutoresizingMaskIntoConstraints="NO" id="WWe-kT-6hf">
+                                <rect key="frame" x="26" y="450" width="39" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="box.png" translatesAutoresizingMaskIntoConstraints="NO" id="FvS-L0-30s">
+                                <rect key="frame" x="26" y="550" width="39" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="box.png" translatesAutoresizingMaskIntoConstraints="NO" id="6VI-Pn-pEh">
+                                <rect key="frame" x="26" y="650" width="39" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="box.png" translatesAutoresizingMaskIntoConstraints="NO" id="LBU-MA-Khm">
+                                <rect key="frame" x="26" y="750" width="39" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="eoT-V8-61j">
+                                <rect key="frame" x="26" y="338" width="49" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpF-Bp-YFO">
+                                <rect key="frame" x="26" y="438" width="49" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fkb-9V-g48">
+                                <rect key="frame" x="26" y="538" width="49" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="oyx-EL-n8R">
+                                <rect key="frame" x="26" y="638" width="49" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="krm-X5-8Qc">
+                                <rect key="frame" x="26" y="738" width="49" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="1gO-Ti-WwW">
+                                <rect key="frame" x="26" y="238" width="49" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mfs-8e-bzP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <size key="freeformSize" width="340" height="875"/>
+                    <connections>
+                        <outlet property="check1" destination="1gO-Ti-WwW" id="HP1-YL-6KX"/>
+                        <outlet property="check2" destination="eoT-V8-61j" id="BZc-3e-GsS"/>
+                        <outlet property="check3" destination="hpF-Bp-YFO" id="JqL-qa-Pxz"/>
+                        <outlet property="check4" destination="Fkb-9V-g48" id="39X-3b-4CC"/>
+                        <outlet property="check5" destination="oyx-EL-n8R" id="kTY-BL-MST"/>
+                        <outlet property="check6" destination="krm-X5-8Qc" id="juS-vd-V6l"/>
+                        <outlet property="checkBox1" destination="lfI-k8-aR8" id="1AY-5v-Zjc"/>
+                        <outlet property="checkBox2" destination="uUm-RJ-mJp" id="Kjp-Za-o4Y"/>
+                        <outlet property="checkBox3" destination="WWe-kT-6hf" id="U2B-2V-WIn"/>
+                        <outlet property="checkBox4" destination="FvS-L0-30s" id="Ct3-8p-9tz"/>
+                        <outlet property="checkBox5" destination="6VI-Pn-pEh" id="Q2Y-NH-Xhd"/>
+                        <outlet property="checkBox6" destination="LBU-MA-Khm" id="e6b-w6-zBB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3G-oo-OLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3278" y="75"/>
+            <point key="canvasLocation" x="3276.811594202899" y="74.665178571428569"/>
         </scene>
     </scenes>
     <resources>
