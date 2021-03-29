@@ -65,5 +65,9 @@
 @property (nonatomic, strong) IBOutlet UIImageView *bodyRightArm;
 @property (nonatomic, strong) IBOutlet UIImageView *bodyRightLeg;
 
+@property (nonatomic, strong) IBOutlet UILabel* usedLettersLabel;
+
+@property NSMutableArray* usedLetters;
+
 @end
 

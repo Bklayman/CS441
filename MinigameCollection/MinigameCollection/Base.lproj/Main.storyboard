@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="hangmanBase (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="6aE-Ln-qgi">
-                                <rect key="frame" x="-175" y="-31" width="534" height="619"/>
+                                <rect key="frame" x="-185" y="-54" width="474" height="619"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dash.png" translatesAutoresizingMaskIntoConstraints="NO" id="yOe-sn-ZcJ">
@@ -297,29 +297,43 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="head.png" translatesAutoresizingMaskIntoConstraints="NO" id="tny-UT-wFh">
-                                <rect key="frame" x="73" y="140" width="60" height="55"/>
+                                <rect key="frame" x="31" y="135" width="60" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="body.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ico-Gh-4h6">
-                                <rect key="frame" x="14" y="189" width="177" height="132"/>
+                                <rect key="frame" x="-27" y="183" width="177" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="leftParts.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oqc-vd-dt9">
-                                <rect key="frame" x="83" y="198" width="108" height="114"/>
+                                <rect key="frame" x="47" y="198" width="90" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="leftParts.png" translatesAutoresizingMaskIntoConstraints="NO" id="R2C-5A-YGc">
-                                <rect key="frame" x="16" y="198" width="108" height="114"/>
+                                <rect key="frame" x="-14" y="198" width="90" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="leftParts.png" translatesAutoresizingMaskIntoConstraints="NO" id="u8S-5G-JSf">
-                                <rect key="frame" x="83" y="291" width="108" height="114"/>
+                                <rect key="frame" x="47" y="293" width="90" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="leftParts.png" translatesAutoresizingMaskIntoConstraints="NO" id="BT3-pB-Q5d">
-                                <rect key="frame" x="16" y="291" width="108" height="114"/>
+                                <rect key="frame" x="-14" y="282" width="90" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Used Letters:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3g-h7-eQZ">
+                                <rect key="frame" x="235" y="116" width="102" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTO-h9-aTo">
+                                <rect key="frame" x="235" y="135" width="108" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -379,6 +393,7 @@
                         <outlet property="bodyRightArm" destination="Oqc-vd-dt9" id="ZE7-zA-uB8"/>
                         <outlet property="bodyRightLeg" destination="u8S-5G-JSf" id="bPj-YI-trz"/>
                         <outlet property="bodyTorso" destination="Ico-Gh-4h6" id="T1j-XT-foe"/>
+                        <outlet property="usedLettersLabel" destination="sTO-h9-aTo" id="rG0-oi-JBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -555,7 +570,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2ru-YR-1r8"/>
+        <segue reference="b9u-xt-XeE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="body.png" width="200" height="200"/>

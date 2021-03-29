@@ -156,6 +156,7 @@ NSString* wordToGuess;
                 [self getUIImage:i].hidden = TRUE;
             } else {
                 [usedLabels addObject:[self getUILabel:i]];
+                [self getUIImage:i].hidden = FALSE;
             }
             [self getUILabel:i].text = @"";
         }
@@ -164,6 +165,7 @@ NSString* wordToGuess;
                 [self getUIImage:i].hidden = TRUE;
             } else {
                 [usedLabels addObject:[self getUILabel:i]];
+                [self getUIImage:i].hidden = FALSE;
             }
             [self getUILabel:i].text = @"";
         }
@@ -192,18 +194,21 @@ NSString* wordToGuess;
                     [self getUIImage:i].hidden = TRUE;
                 } else {
                     [usedLabels addObject:[self getUILabel:i]];
+                    [self getUIImage:i].hidden = FALSE;
                 }
             } else if(i < 14){
                 if(i < 7 + line2Blanks / 2 + line2ExtraSpace || i > 13 - line2Blanks / 2){
                     [self getUIImage:i].hidden = TRUE;
                 } else {
                     [usedLabels addObject:[self getUILabel:i]];
+                    [self getUIImage:i].hidden = FALSE;
                 }
             } else {
                 if(i < 14 + line3Blanks / 2 + line3ExtraSpace || i > 21 - line3Blanks / 2){
                     [self getUIImage:i].hidden = TRUE;
                 } else {
                     [usedLabels addObject:[self getUILabel:i]];
+                    [self getUIImage:i].hidden = FALSE;
                 }
             }
             [self getUILabel:i].text = @"";
@@ -234,6 +239,7 @@ NSString* wordToGuess;
 
 - (IBAction)hangmanGuessButtonClicked:(id)sender{ //Takes whatever is entered by the player, checks the input, and if the input is valid, checks the chosen word for the guessed letter (adding a miss if it is wrong)
     NSString* guess = _Guess.text;
+    guess = [guess stringByReplacingOccurrencesOfString:@" " withString:@""];
     if(guess.length != 1){
         return;
     }
@@ -243,19 +249,20 @@ NSString* wordToGuess;
     if(charGuessed < 'a' || charGuessed > 'z'){
         return;
     }
+    for(int i = 0; i < [_usedLetters count]; i++){
+        if([_usedLetters[i] doubleValue] == charGuessed){
+            [Singleton sharedObject].validAnswer = FALSE;
+            [Singleton sharedObject].guess = charGuessed;
+            return;
+        }
+    }
     NSMutableArray* letterPlaces = [[NSMutableArray alloc] init];
-    BOOL valid = TRUE;
     for(int i = 0; i < wordToGuess.length; i++){
         if([wordToGuess characterAtIndex:i] == charGuessed){
             [letterPlaces addObject:[NSNumber numberWithInt:i]];
         }
     }
-    if(!valid){
-        [Singleton sharedObject].validAnswer = FALSE;
-        [Singleton sharedObject].guess = charGuessed;
-        misses++;
-        [self placeBody];
-    } else if(letterPlaces.count == 0){
+    if(letterPlaces.count == 0){
         [Singleton sharedObject].correctAnswer = FALSE;
         [Singleton sharedObject].validAnswer = TRUE;
         misses++;
@@ -270,6 +277,16 @@ NSString* wordToGuess;
         if(hits == wordToGuess.length){
             [self winGame];
         }
+    }
+    [self addUsedLetter:charGuessed];
+}
+
+- (void)addUsedLetter:(char)guess{
+    [_usedLetters addObject:[NSNumber numberWithInteger:guess]];
+    if(![_usedLettersLabel.text compare:@"N/A"]){
+        _usedLettersLabel.text = [NSString stringWithFormat:@"%c", guess];
+    } else {
+        _usedLettersLabel.text = [NSString stringWithFormat:@"%@%@%c", _usedLettersLabel.text, @" ", guess];
     }
 }
 
@@ -325,6 +342,7 @@ NSString* wordToGuess;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _usedLetters = [[NSMutableArray alloc] init];
     [_Guess addTarget:self action:@selector(guessTextDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
     
     UIImage* leftPartsSource = [UIImage imageNamed:@"leftParts.png"];

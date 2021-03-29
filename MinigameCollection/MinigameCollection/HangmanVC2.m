@@ -21,7 +21,7 @@
     } else if ([Singleton sharedObject].winGame){
         _Description.text = [NSString stringWithFormat:@"Conlaturations! You guessed the word %@!", [Singleton sharedObject].wordToGuess];
     } else if(![Singleton sharedObject].validAnswer){
-        _Description.text = [NSString stringWithFormat:@"%@%c%@", @"You already guessed ", [Singleton sharedObject].guess, @"for this word."];
+        _Description.text = [NSString stringWithFormat:@"%@%c%@", @"You already guessed ", [Singleton sharedObject].guess, @" for this word."];
     } else if([Singleton sharedObject].correctAnswer){
         if([Singleton sharedObject].numFound == 1){
             _Description.text = [NSString stringWithFormat:@"%@%c%s", @"There is 1 ",  [Singleton sharedObject].guess, " in this word."];
