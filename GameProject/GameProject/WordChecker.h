@@ -23,4 +23,18 @@
 @property (nonatomic, strong) IBOutlet UIImageView* check5;
 @property (nonatomic, strong) IBOutlet UIImageView* check6;
 
+@property (nonatomic, strong) IBOutlet UITextField* player1Word;
+@property (nonatomic, strong) IBOutlet UITextField* player2Word;
+@property (nonatomic, strong) IBOutlet UITextField* player3Word;
+@property (nonatomic, strong) IBOutlet UITextField* player4Word;
+@property (nonatomic, strong) IBOutlet UITextField* player5Word;
+@property (nonatomic, strong) IBOutlet UITextField* player6Word;
+
+@property (nonatomic, strong) IBOutlet UILabel* player1Name;
+@property (nonatomic, strong) IBOutlet UILabel* player2Name;
+@property (nonatomic, strong) IBOutlet UILabel* player3Name;
+@property (nonatomic, strong) IBOutlet UILabel* player4Name;
+@property (nonatomic, strong) IBOutlet UILabel* player5Name;
+@property (nonatomic, strong) IBOutlet UILabel* player6Name;
+
 @end
