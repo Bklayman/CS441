@@ -364,4 +364,8 @@ NSString* wordToGuess;
     _PlayAgainButton.hidden = TRUE;
 }
 
+- (IBAction)instructionsClicked:(id)sender{
+    [Singleton sharedObject].gameSource = 0;
+}
+
 @end

@@ -10,6 +10,8 @@
 		4F37D7DC25E00B4D00848A33 /* dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F37D7DB25E00B4D00848A33 /* dash.png */; };
 		4F73665725E9415600602C52 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F73665625E9415600602C52 /* Singleton.m */; };
 		4F73666025E9456200602C52 /* HangmanVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F73665F25E9456200602C52 /* HangmanVC2.m */; };
+		4FB135EF26166BF8005CB1FE /* Blackjack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB135EE26166BF8005CB1FE /* Blackjack.m */; };
+		4FB135F526166DE5005CB1FE /* Instructions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB135F426166DE5005CB1FE /* Instructions.m */; };
 		4FB609EB2608EA29009E258B /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB609EA2608EA29009E258B /* head.png */; };
 		4FB609F02608EA60009E258B /* body.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB609EF2608EA60009E258B /* body.png */; };
 		4FB609F52608EB16009E258B /* leftParts.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB609F42608EB16009E258B /* leftParts.png */; };
@@ -53,6 +55,10 @@
 		4F73665625E9415600602C52 /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		4F73665E25E9455300602C52 /* HangmanVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HangmanVC2.h; sourceTree = "<group>"; };
 		4F73665F25E9456200602C52 /* HangmanVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangmanVC2.m; sourceTree = "<group>"; };
+		4FB135EE26166BF8005CB1FE /* Blackjack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blackjack.m; sourceTree = "<group>"; };
+		4FB135F326166C03005CB1FE /* Blackjack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Blackjack.h; sourceTree = "<group>"; };
+		4FB135F426166DE5005CB1FE /* Instructions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Instructions.m; sourceTree = "<group>"; };
+		4FB135FC26166DEF005CB1FE /* Instructions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instructions.h; sourceTree = "<group>"; };
 		4FB609EA2608EA29009E258B /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = head.png; path = ../../../../../../../../Downloads/head.png; sourceTree = "<group>"; };
 		4FB609EF2608EA60009E258B /* body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = body.png; path = ../../../../../../../../Downloads/body.png; sourceTree = "<group>"; };
 		4FB609F42608EB16009E258B /* leftParts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leftParts.png; path = ../../../../../../../../Downloads/leftParts.png; sourceTree = "<group>"; };
@@ -141,6 +147,10 @@
 				4FE4955825DD60BB00228CEE /* ViewController.m */,
 				4FE4955725DD60BB00228CEE /* ViewController.h */,
 				4FE4955A25DD60BB00228CEE /* Main.storyboard */,
+				4FB135F426166DE5005CB1FE /* Instructions.m */,
+				4FB135FC26166DEF005CB1FE /* Instructions.h */,
+				4FB135EE26166BF8005CB1FE /* Blackjack.m */,
+				4FB135F326166C03005CB1FE /* Blackjack.h */,
 				4FCFD0512604ECB60024B067 /* rockPaperScissors.m */,
 				4FCFD0562604ECBF0024B067 /* rockPaperScissors.h */,
 				4F73665E25E9455300602C52 /* HangmanVC2.h */,
@@ -321,9 +331,11 @@
 				4FE4955325DD60BB00228CEE /* AppDelegate.m in Sources */,
 				4FE4956425DD60BC00228CEE /* main.m in Sources */,
 				4FE4955625DD60BB00228CEE /* SceneDelegate.m in Sources */,
+				4FB135EF26166BF8005CB1FE /* Blackjack.m in Sources */,
 				4F73666025E9456200602C52 /* HangmanVC2.m in Sources */,
 				4F73665725E9415600602C52 /* Singleton.m in Sources */,
 				4FCFD0522604ECB60024B067 /* rockPaperScissors.m in Sources */,
+				4FB135F526166DE5005CB1FE /* Instructions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

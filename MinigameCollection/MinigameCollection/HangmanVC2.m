@@ -7,7 +7,6 @@
 
 #include "HangmanVC2.h"
 #include "Singleton.h"
-#include "ViewController.h"
 
 @interface HangmanVC2 ()
 

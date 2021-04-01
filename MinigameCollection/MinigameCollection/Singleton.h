@@ -12,6 +12,7 @@
 
 + (Singleton*) sharedObject;
 
+//Hangman
 @property BOOL correctAnswer;
 @property int numFound;
 @property char guess;
@@ -20,5 +21,8 @@
 @property NSString* wordToGuess;
 @property BOOL gameOver;
 @property BOOL winGame;
+
+//Instructions
+@property int gameSource;
 
 @end

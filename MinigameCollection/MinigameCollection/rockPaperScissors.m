@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "rockPaperScissors.h"
+#import "Singleton.h"
 
 @interface rockPaperScissors ()
 
@@ -175,6 +176,10 @@
         _points++;
     }
     _numPoints.text = [NSString stringWithFormat:@"%d", _points];
+}
+
+- (IBAction)instructionsClicked:(id)sender{
+    [Singleton sharedObject].gameSource = 1;
 }
 
 @end

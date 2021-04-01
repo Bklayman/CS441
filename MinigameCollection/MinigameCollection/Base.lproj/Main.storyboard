@@ -334,6 +334,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNj-lJ-W4d">
+                                <rect key="frame" x="86" y="781" width="202" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Instructions"/>
+                                <connections>
+                                    <action selector="instructionsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z71-mV-4Tp"/>
+                                    <segue destination="8EL-b7-r0l" kind="presentation" id="yxV-Ap-FUk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -462,6 +472,15 @@
                                     <segue destination="T64-jr-The" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="YMR-kJ-YMe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-Fh-let">
+                                <rect key="frame" x="117" y="352" width="140" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Blackjack"/>
+                                <connections>
+                                    <segue destination="kfg-2N-IxR" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="F31-jv-hQJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FNZ-EN-F08"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -471,6 +490,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJ0-kY-pKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-960" y="77"/>
+        </scene>
+        <!--Instructions-->
+        <scene sceneID="QvC-vw-IXg">
+            <objects>
+                <viewController id="8EL-b7-r0l" customClass="Instructions" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mEd-3E-bPg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="806"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGk-Tr-Lgf">
+                                <rect key="frame" x="16" y="20" width="343" height="766"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BL6-4b-txj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="860"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPq-49-2wk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-963.04347826086962" y="-627.45535714285711"/>
         </scene>
         <!--Rock Paper Scissors-->
         <scene sceneID="lqX-IP-68g">
@@ -552,6 +596,16 @@
                                 <rect key="frame" x="132" y="381" width="110" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12h-w4-7bb">
+                                <rect key="frame" x="76" y="774" width="225" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Instructions"/>
+                                <connections>
+                                    <action selector="instructionsClicked:" destination="T64-jr-The" eventType="touchUpInside" id="aad-aX-VcI"/>
+                                    <segue destination="8EL-b7-r0l" kind="presentation" id="c3C-h0-bed"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a2w-kc-f9R"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -568,9 +622,49 @@
             </objects>
             <point key="canvasLocation" x="461.59420289855075" y="-649.55357142857144"/>
         </scene>
+        <!--Blackjack-->
+        <scene sceneID="Kn2-UZ-Ky8">
+            <objects>
+                <viewController id="kfg-2N-IxR" customClass="Blackjack" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OOf-CB-A7R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="860"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-br-j06">
+                                <rect key="frame" x="124" y="677" width="127" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Return"/>
+                                <connections>
+                                    <segue destination="sEg-90-BYX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="ADv-Sb-psx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv4-4I-DaR">
+                                <rect key="frame" x="88" y="747" width="225" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Instructions"/>
+                                <connections>
+                                    <action selector="instructionsClicked:" destination="kfg-2N-IxR" eventType="touchUpInside" id="XDI-cb-cpY"/>
+                                    <segue destination="8EL-b7-r0l" kind="popoverPresentation" popoverAnchorView="Cv4-4I-DaR" id="Rvu-Gp-0Wx">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rQT-S0-r0q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="860"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ul4-hg-Pdm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="823"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b9u-xt-XeE"/>
+        <segue reference="Rvu-Gp-0Wx"/>
+        <segue reference="ADv-Sb-psx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="body.png" width="200" height="200"/>
