@@ -12,24 +12,13 @@
 
 + (Singleton*) sharedObject;
 
-@property bool player3Exists;
-@property bool player4Exists;
-@property bool player5Exists;
-@property bool player6Exists;
+@property NSMutableArray* playerExists;
 
-@property NSString* player1Name;
-@property NSString* player2Name;
-@property NSString* player3Name;
-@property NSString* player4Name;
-@property NSString* player5Name;
-@property NSString* player6Name;
+@property NSMutableArray* playerNames;
 
-@property NSString* player1Word;
-@property NSString* player2Word;
-@property NSString* player3Word;
-@property NSString* player4Word;
-@property NSString* player5Word;
-@property NSString* player6Word;
+@property NSMutableArray* playerWords;
+
+@property NSMutableArray* playerPoints;
 
 @property char roundLetter;
 @property NSString* roundCategory;

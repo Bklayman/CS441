@@ -27,17 +27,17 @@
 - (NSString*)getPlayerName:(int)index {
     switch(index){
         case 1:
-            return [Singleton sharedObject].player1Name;
+            return [Singleton sharedObject].playerNames[0];
         case 2:
-            return [Singleton sharedObject].player2Name;
+            return [Singleton sharedObject].playerNames[1];
         case 3:
-            return [Singleton sharedObject].player3Name;
+            return [Singleton sharedObject].playerNames[2];
         case 4:
-            return [Singleton sharedObject].player4Name;
+            return [Singleton sharedObject].playerNames[3];
         case 5:
-            return [Singleton sharedObject].player5Name;
+            return [Singleton sharedObject].playerNames[4];
         case 6:
-            return [Singleton sharedObject].player6Name;
+            return [Singleton sharedObject].playerNames[5];
     }
     return NULL;
 }
@@ -61,22 +61,22 @@
 - (void)saveWord:(NSString*)word :(int)index{
     switch(index){
         case 1:
-            [Singleton sharedObject].player1Word = word;
+            [Singleton sharedObject].playerNames[0] = word;
             break;
         case 2:
-            [Singleton sharedObject].player2Word = word;
+            [Singleton sharedObject].playerNames[1] = word;
             break;
         case 3:
-            [Singleton sharedObject].player3Word = word;
+            [Singleton sharedObject].playerNames[2] = word;
             break;
         case 4:
-            [Singleton sharedObject].player4Word = word;
+            [Singleton sharedObject].playerNames[3] = word;
             break;
         case 5:
-            [Singleton sharedObject].player5Word = word;
+            [Singleton sharedObject].playerNames[4] = word;
             break;
         case 6:
-            [Singleton sharedObject].player6Word = word;
+            [Singleton sharedObject].playerNames[5] = word;
             break;
     }
 }
@@ -86,25 +86,25 @@
     int unrandomizedPlayers = 2;
     playersToPick[0] = 1;
     playersToPick[1] = 2;
-    if([Singleton sharedObject].player3Exists){
+    if([Singleton sharedObject].playerExists[0]){
         playersToPick[2] = 3;
         unrandomizedPlayers++;
     } else {
         playersToPick[2] = -1;
     }
-    if([Singleton sharedObject].player4Exists){
+    if([Singleton sharedObject].playerExists[1]){
         playersToPick[3] = 4;
         unrandomizedPlayers++;
     } else {
         playersToPick[3] = -1;
     }
-    if([Singleton sharedObject].player5Exists){
+    if([Singleton sharedObject].playerExists[2]){
         playersToPick[4] = 5;
         unrandomizedPlayers++;
     } else {
         playersToPick[4] = -1;
     }
-    if([Singleton sharedObject].player6Exists){
+    if([Singleton sharedObject].playerExists[3]){
         playersToPick[5] = 6;
         unrandomizedPlayers++;
     } else {

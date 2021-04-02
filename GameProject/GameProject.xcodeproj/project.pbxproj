@@ -10,6 +10,8 @@
 		4F08019F260B7B0C0004F96C /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F08019E260B7B0C0004F96C /* Singleton.m */; };
 		4F0801A8260B84270004F96C /* RoundPresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0801A7260B84270004F96C /* RoundPresentation.m */; };
 		4F98B04D260E20BC00478DF2 /* wordChoosing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98B04C260E20BC00478DF2 /* wordChoosing.m */; };
+		4FB135FE26175731005CB1FE /* WordEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB135FD26175731005CB1FE /* WordEvaluator.m */; };
+		4FB13608261759CD005CB1FE /* Leaderboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB13607261759CD005CB1FE /* Leaderboard.m */; };
 		4FB609A42608D7A1009E258B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB609A32608D7A1009E258B /* AppDelegate.m */; };
 		4FB609A72608D7A1009E258B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB609A62608D7A1009E258B /* SceneDelegate.m */; };
 		4FB609AA2608D7A1009E258B /* PlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB609A92608D7A1009E258B /* PlayerInfo.m */; };
@@ -48,6 +50,10 @@
 		4F0801A7260B84270004F96C /* RoundPresentation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundPresentation.m; sourceTree = "<group>"; };
 		4F98B04B260E20B000478DF2 /* wordChoosing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wordChoosing.h; sourceTree = "<group>"; };
 		4F98B04C260E20BC00478DF2 /* wordChoosing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wordChoosing.m; sourceTree = "<group>"; };
+		4FB135FD26175731005CB1FE /* WordEvaluator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordEvaluator.m; sourceTree = "<group>"; };
+		4FB136022617573C005CB1FE /* WordEvaluator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordEvaluator.h; sourceTree = "<group>"; };
+		4FB13606261759C2005CB1FE /* Leaderboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Leaderboard.h; sourceTree = "<group>"; };
+		4FB13607261759CD005CB1FE /* Leaderboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Leaderboard.m; sourceTree = "<group>"; };
 		4FB6099F2608D7A1009E258B /* GameProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB609A22608D7A1009E258B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FB609A32608D7A1009E258B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,6 +135,10 @@
 				4F08019D260B7AF20004F96C /* Singleton.h */,
 				4F08019E260B7B0C0004F96C /* Singleton.m */,
 				4FB609AB2608D7A1009E258B /* Main.storyboard */,
+				4FB13606261759C2005CB1FE /* Leaderboard.h */,
+				4FB13607261759CD005CB1FE /* Leaderboard.m */,
+				4FB135FD26175731005CB1FE /* WordEvaluator.m */,
+				4FB136022617573C005CB1FE /* WordEvaluator.h */,
 				4FE974F126121BAF00D334FC /* WordChecker.m */,
 				4FE974F626121BB900D334FC /* WordChecker.h */,
 				4F98B04B260E20B000478DF2 /* wordChoosing.h */,
@@ -295,9 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB609AA2608D7A1009E258B /* PlayerInfo.m in Sources */,
+				4FB135FE26175731005CB1FE /* WordEvaluator.m in Sources */,
 				4FE974F226121BAF00D334FC /* WordChecker.m in Sources */,
 				4F98B04D260E20BC00478DF2 /* wordChoosing.m in Sources */,
 				4FB609A42608D7A1009E258B /* AppDelegate.m in Sources */,
+				4FB13608261759CD005CB1FE /* Leaderboard.m in Sources */,
 				4F0801A8260B84270004F96C /* RoundPresentation.m in Sources */,
 				4FB609B52608D7A2009E258B /* main.m in Sources */,
 				4FB609A72608D7A1009E258B /* SceneDelegate.m in Sources */,

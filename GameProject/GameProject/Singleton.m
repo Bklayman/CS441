@@ -21,24 +21,24 @@
 
 - (id)init{
     if(self = [super init]){
-        _player3Exists = FALSE;
-        _player4Exists = FALSE;
-        _player5Exists = FALSE;
-        _player6Exists = FALSE;
-        _player1Name = @"";
-        _player2Name = @"";
-        _player3Name = @"";
-        _player4Name = @"";
-        _player5Name = @"";
-        _player6Name = @"";
+        _playerExists = [[NSMutableArray alloc] init];
+        for(int i = 0; i < 4; i++){
+            [_playerExists addObject:[NSNumber numberWithBool:FALSE]];
+        }
+        _playerNames = [[NSMutableArray alloc] init];
+        for(int i = 0; i < 6; i++){
+            [_playerNames addObject:@""];
+        }
         _roundLetter = @'Q';
         _roundCategory = @"";
-        _player1Word = @"";
-        _player2Word = @"";
-        _player3Word = @"";
-        _player4Word = @"";
-        _player5Word = @"";
-        _player6Word = @"";
+        _playerWords = [[NSMutableArray alloc] init];
+        for(int i = 0; i < 6; i++){
+            [_playerWords addObject:@""];
+        }
+        _playerPoints = [[NSMutableArray alloc] init];
+        for(int i = 0; i < 6; i++){
+            [_playerNames addObject:[NSNumber numberWithInt:0]];
+        }
     }
     return self;
 }

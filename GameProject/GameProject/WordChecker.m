@@ -28,7 +28,7 @@
 }
 
 - (void)showNeededAssets{
-    if([Singleton sharedObject].player3Exists){
+    if([Singleton sharedObject].playerExists[0]){
         _player3Name.hidden = FALSE;
         _player3Word.hidden = FALSE;
         _check3.hidden = FALSE;
@@ -39,7 +39,7 @@
         _check3.hidden = TRUE;
         _checkBox3.hidden = TRUE;
     }
-    if([Singleton sharedObject].player4Exists){
+    if([Singleton sharedObject].playerExists[1]){
         _player4Name.hidden = FALSE;
         _player4Word.hidden = FALSE;
         _check4.hidden = FALSE;
@@ -50,7 +50,7 @@
         _check4.hidden = TRUE;
         _checkBox4.hidden = TRUE;
     }
-    if([Singleton sharedObject].player5Exists){
+    if([Singleton sharedObject].playerExists[2]){
         _player5Name.hidden = FALSE;
         _player5Word.hidden = FALSE;
         _check5.hidden = FALSE;
@@ -61,7 +61,7 @@
         _check5.hidden = TRUE;
         _checkBox5.hidden = TRUE;
     }
-    if([Singleton sharedObject].player6Exists){
+    if([Singleton sharedObject].playerExists[3]){
         _player6Name.hidden = FALSE;
         _player6Word.hidden = FALSE;
         _check6.hidden = FALSE;
@@ -75,12 +75,12 @@
 }
 
 - (void)addGivenWords{
-    _player1Word.text = [Singleton sharedObject].player1Word;
-    _player2Word.text = [Singleton sharedObject].player2Word;
-    _player3Word.text = [Singleton sharedObject].player3Word;
-    _player4Word.text = [Singleton sharedObject].player4Word;
-    _player5Word.text = [Singleton sharedObject].player5Word;
-    _player6Word.text = [Singleton sharedObject].player6Word;
+    _player1Word.text = [Singleton sharedObject].playerWords[0];
+    _player2Word.text = [Singleton sharedObject].playerWords[1];
+    _player3Word.text = [Singleton sharedObject].playerWords[2];
+    _player4Word.text = [Singleton sharedObject].playerWords[3];
+    _player5Word.text = [Singleton sharedObject].playerWords[4];
+    _player6Word.text = [Singleton sharedObject].playerWords[5];
 }
 
 //Based on https://stackoverflow.com/questions/17120476/click-event-on-uiimageview-programmatically-in-ios
@@ -114,76 +114,76 @@
 - (void)tapDetected1{
     _check1.hidden = !_check1.hidden;
     if(_check1.hidden){
-        [Singleton sharedObject].player1Word = @"";
+        [Singleton sharedObject].playerWords[0] = @"";
     } else {
-        [Singleton sharedObject].player1Word = _player1Word.text;
+        [Singleton sharedObject].playerWords[0] = _player1Word.text;
     }
 }
 
 - (void)tapDetected2{
     _check2.hidden = !_check2.hidden;
     if(_check2.hidden){
-        [Singleton sharedObject].player2Word = @"";
+        [Singleton sharedObject].playerWords[1] = @"";
     } else {
-        [Singleton sharedObject].player2Word = _player2Word.text;
+        [Singleton sharedObject].playerWords[1] = _player2Word.text;
     }
 }
 
 - (void)tapDetected3{
     _check3.hidden = !_check3.hidden;
     if(_check3.hidden){
-        [Singleton sharedObject].player3Word = @"";
+        [Singleton sharedObject].playerWords[2] = @"";
     } else {
-        [Singleton sharedObject].player3Word = _player3Word.text;
+        [Singleton sharedObject].playerWords[2] = _player3Word.text;
     }
 }
 
 - (void)tapDetected4{
     _check4.hidden = !_check4.hidden;
     if(_check4.hidden){
-        [Singleton sharedObject].player4Word = @"";
+        [Singleton sharedObject].playerWords[3] = @"";
     } else {
-        [Singleton sharedObject].player4Word = _player4Word.text;
+        [Singleton sharedObject].playerWords[3] = _player4Word.text;
     }
 }
 
 - (void)tapDetected5{
     _check5.hidden = !_check5.hidden;
     if(_check5.hidden){
-        [Singleton sharedObject].player5Word = @"";
+        [Singleton sharedObject].playerWords[4] = @"";
     } else {
-        [Singleton sharedObject].player5Word = _player5Word.text;
+        [Singleton sharedObject].playerWords[4] = _player5Word.text;
     }
 }
 
 - (void)tapDetected6{
     _check6.hidden = !_check6.hidden;
     if(_check6.hidden){
-        [Singleton sharedObject].player6Word = @"";
+        [Singleton sharedObject].playerWords[5] = @"";
     } else {
-        [Singleton sharedObject].player6Word = _player6Word.text;
+        [Singleton sharedObject].playerWords[5] = _player6Word.text;
     }
 }
 
 - (IBAction)nameTextDone:(id)sender{
     [sender resignFirstResponder];
     if(!_check1.hidden){
-        [Singleton sharedObject].player1Word = _player1Word.text;
+        [Singleton sharedObject].playerWords[0] = _player1Word.text;
     }
     if(!_check2.hidden){
-        [Singleton sharedObject].player2Word = _player2Word.text;
+        [Singleton sharedObject].playerWords[1] = _player2Word.text;
     }
     if(!_check3.hidden){
-        [Singleton sharedObject].player3Word = _player3Word.text;
+        [Singleton sharedObject].playerWords[2] = _player3Word.text;
     }
     if(!_check4.hidden){
-        [Singleton sharedObject].player4Word = _player4Word.text;
+        [Singleton sharedObject].playerWords[3] = _player4Word.text;
     }
     if(!_check5.hidden){
-        [Singleton sharedObject].player5Word = _player5Word.text;
+        [Singleton sharedObject].playerWords[4] = _player5Word.text;
     }
     if(!_check6.hidden){
-        [Singleton sharedObject].player6Word = _player6Word.text;
+        [Singleton sharedObject].playerWords[5] = _player6Word.text;
     }
 }
 
