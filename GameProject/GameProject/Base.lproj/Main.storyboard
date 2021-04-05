@@ -287,7 +287,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Q" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9t-kc-xoF">
-                                <rect key="frame" x="314" y="252" width="26" height="41"/>
+                                <rect key="frame" x="314" y="252" width="45" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
@@ -328,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MpJ-u2-Jpy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="75"/>
+            <point key="canvasLocation" x="1778.985507246377" y="75"/>
         </scene>
         <!--Word Choosing-->
         <scene sceneID="4BE-tl-cLb">
@@ -686,6 +686,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <size key="freeformSize" width="340" height="875"/>
+                    <connections>
+                        <outlet property="player1Name" destination="MNU-QU-OxD" id="vVK-ho-q8f"/>
+                        <outlet property="player1Result" destination="61L-tX-XO7" id="ecC-Cb-OFd"/>
+                        <outlet property="player2Name" destination="lsM-xf-8DE" id="Opi-Td-tvj"/>
+                        <outlet property="player2Result" destination="lje-2q-2uf" id="7zv-g8-689"/>
+                        <outlet property="player3Name" destination="maN-12-zKw" id="SgA-wn-HkC"/>
+                        <outlet property="player3Result" destination="WYo-qe-geH" id="G2F-pN-RPm"/>
+                        <outlet property="player4Name" destination="3EA-aD-euX" id="HNZ-Ua-vlO"/>
+                        <outlet property="player4Result" destination="tqF-CE-uLV" id="9iV-jw-p6Y"/>
+                        <outlet property="player5Name" destination="fEq-Em-Jpq" id="wzp-gj-NSG"/>
+                        <outlet property="player5Result" destination="Bjz-gH-Y71" id="OcZ-p1-uuT"/>
+                        <outlet property="player6Name" destination="iuS-4T-56j" id="Zgz-MS-aHn"/>
+                        <outlet property="player6Result" destination="dzO-yN-KtP" id="omG-41-a6Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wn-bY-UIY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -717,6 +731,16 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="EP5-OO-kjS"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3If-dj-cMO">
+                                <rect key="frame" x="231" y="44" width="93" height="698"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fjo-h9-V84">
+                                <rect key="frame" x="16" y="31" width="194" height="711"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ump-wi-iL4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -725,11 +749,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jq-1v-OGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="798"/>
+            <point key="canvasLocation" x="969.56521739130437" y="797.87946428571422"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AsK-Eg-vTY"/>
+        <segue reference="NXC-xb-5GM"/>
+        <segue reference="nfM-4s-jcx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="box.png" width="227" height="350"/>

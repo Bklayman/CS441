@@ -45,6 +45,10 @@
     [_checkBox5 addGestureRecognizer:singleTap5];
     [_checkBox6 setUserInteractionEnabled:YES];
     [_checkBox6 addGestureRecognizer:singleTap6];
+    _check3.hidden = TRUE;
+    _check4.hidden = TRUE;
+    _check5.hidden = TRUE;
+    _check6.hidden = TRUE;
 }
 
 - (void)tapDetected3{
@@ -80,19 +84,19 @@
         _startGameButton.hidden = TRUE;
         return;
     }
-    if([Singleton sharedObject].playerExists[2] && [[Singleton sharedObject].playerNames[2] isEqualToString:@""]){
+    if([Singleton sharedObject].playerExists[0] == [NSNumber numberWithBool:TRUE] && [[Singleton sharedObject].playerNames[2] isEqualToString:@""]){
         _startGameButton.hidden = TRUE;
         return;
     }
-    if([Singleton sharedObject].playerExists[3] && [[Singleton sharedObject].playerNames[3] isEqualToString:@""]){
+    if([Singleton sharedObject].playerExists[1] == [NSNumber numberWithBool:TRUE] && [[Singleton sharedObject].playerNames[3] isEqualToString:@""]){
         _startGameButton.hidden = TRUE;
         return;
     }
-    if([Singleton sharedObject].playerExists[4] && [[Singleton sharedObject].playerNames[4] isEqualToString:@""]){
+    if([Singleton sharedObject].playerExists[2] == [NSNumber numberWithBool:TRUE] && [[Singleton sharedObject].playerNames[4] isEqualToString:@""]){
         _startGameButton.hidden = TRUE;
         return;
     }
-    if([Singleton sharedObject].playerExists[5] && [[Singleton sharedObject].playerNames[5] isEqualToString:@""]){
+    if([Singleton sharedObject].playerExists[3] == [NSNumber numberWithBool:TRUE] && [[Singleton sharedObject].playerNames[5] isEqualToString:@""]){
         _startGameButton.hidden = TRUE;
         return;
     }
