@@ -17,6 +17,7 @@
 @property (nonatomic, strong) IBOutlet UIButton* submitWord;
 
 @property NSMutableArray* turnOrder;
+@property NSMutableArray* turnOrderNums;
 @property int curTurn;
 
 @end

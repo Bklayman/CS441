@@ -28,7 +28,7 @@
 }
 
 - (void)showNeededAssets{
-    if([Singleton sharedObject].playerExists[0]){
+    if([[Singleton sharedObject].playerExists[0] boolValue] == TRUE){
         _player3Name.hidden = FALSE;
         _player3Word.hidden = FALSE;
         _check3.hidden = FALSE;
@@ -39,7 +39,7 @@
         _check3.hidden = TRUE;
         _checkBox3.hidden = TRUE;
     }
-    if([Singleton sharedObject].playerExists[1]){
+    if([[Singleton sharedObject].playerExists[1] boolValue] == TRUE){
         _player4Name.hidden = FALSE;
         _player4Word.hidden = FALSE;
         _check4.hidden = FALSE;
@@ -50,7 +50,7 @@
         _check4.hidden = TRUE;
         _checkBox4.hidden = TRUE;
     }
-    if([Singleton sharedObject].playerExists[2]){
+    if([[Singleton sharedObject].playerExists[2] boolValue] == TRUE){
         _player5Name.hidden = FALSE;
         _player5Word.hidden = FALSE;
         _check5.hidden = FALSE;
@@ -61,7 +61,7 @@
         _check5.hidden = TRUE;
         _checkBox5.hidden = TRUE;
     }
-    if([Singleton sharedObject].playerExists[3]){
+    if([[Singleton sharedObject].playerExists[3] boolValue] == TRUE){
         _player6Name.hidden = FALSE;
         _player6Word.hidden = FALSE;
         _check6.hidden = FALSE;
@@ -75,6 +75,12 @@
 }
 
 - (void)addGivenWords{
+    _player1Name.text = [Singleton sharedObject].playerNames[0];
+    _player2Name.text = [Singleton sharedObject].playerNames[1];
+    _player3Name.text = [Singleton sharedObject].playerNames[2];
+    _player4Name.text = [Singleton sharedObject].playerNames[3];
+    _player5Name.text = [Singleton sharedObject].playerNames[4];
+    _player6Name.text = [Singleton sharedObject].playerNames[5];
     _player1Word.text = [Singleton sharedObject].playerWords[0];
     _player2Word.text = [Singleton sharedObject].playerWords[1];
     _player3Word.text = [Singleton sharedObject].playerWords[2];

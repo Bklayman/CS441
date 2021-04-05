@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self enableCheckBoxes];
+    for(int i = 0; i < 6; i++){
+        [Singleton sharedObject].playerPoints[i] = [NSNumber numberWithInt:0];
+    }
     [_player1Name addTarget:self action:@selector(nameTextDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
     [_player2Name addTarget:self action:@selector(nameTextDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
     [_player3Name addTarget:self action:@selector(nameTextDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
@@ -103,36 +106,15 @@
     _startGameButton.hidden = FALSE;
 }
 
-- (void)setPlayerName:(NSString*)name :(int)index{
-    switch(index){
-        case 0:
-            [Singleton sharedObject].playerNames[0] = name;
-        case 1:
-            [Singleton sharedObject].playerNames[1] = name;
-        case 2:
-            [Singleton sharedObject].playerNames[2] = name;
-        case 3:
-            [Singleton sharedObject].playerNames[3] = name;
-        case 4:
-            [Singleton sharedObject].playerNames[4] = name;
-        case 5:
-            [Singleton sharedObject].playerNames[5] = name;
-    }
-}
-
 - (IBAction)nameTextDone:(id)sender{
     [sender resignFirstResponder];
-    [self setPlayerName:_player1Name.text :0];
-    [self setPlayerName:_player2Name.text :1];
-    [self setPlayerName:_player3Name.text :2];
-    [self setPlayerName:_player4Name.text :3];
-    [self setPlayerName:_player5Name.text :4];
-    [self setPlayerName:_player6Name.text :5];
+    [Singleton sharedObject].playerNames[0] = _player1Name.text;
+    [Singleton sharedObject].playerNames[1] = _player2Name.text;
+    [Singleton sharedObject].playerNames[2] = _player3Name.text;
+    [Singleton sharedObject].playerNames[3] = _player4Name.text;
+    [Singleton sharedObject].playerNames[4] = _player5Name.text;
+    [Singleton sharedObject].playerNames[5] = _player6Name.text;
     [self checkEnteredNames];
-}
-
-- (void)checkUsedNames{
-    //TODO
 }
 
 @end

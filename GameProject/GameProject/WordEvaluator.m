@@ -32,7 +32,7 @@
 
 - (void)showNeededPlayers{
     for(int i = 0; i < 4; i++){
-        if([Singleton sharedObject].playerExists[i]){
+        if([[Singleton sharedObject].playerExists[i] boolValue] == TRUE){
             [self getPlayerName:i + 2].hidden = FALSE;
             [self getPlayerResult:i + 2].hidden = FALSE;
         } else {

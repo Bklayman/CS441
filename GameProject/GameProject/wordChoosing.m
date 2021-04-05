@@ -16,8 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_turnOrder removeAllObjects];
+    [_turnOrderNums removeAllObjects];
     [_enteredWord addTarget:self action:@selector(resignResponder:) forControlEvents:UIControlEventEditingDidEndOnExit];
     _turnOrder = [[NSMutableArray alloc] init];
+    _turnOrderNums = [[NSMutableArray alloc] init];
     _nextScreen.hidden = TRUE;
     _submitWord.hidden = FALSE;
     [self createTurnOrder];
@@ -32,35 +35,13 @@
 - (IBAction)nextTurn:(id)sender{
     _curTurn++;
     _enteredWord.text = [_enteredWord.text stringByReplacingOccurrencesOfString:@" " withString:@""];
-    [self saveWord:_enteredWord.text :_curTurn - 1];
+    [Singleton sharedObject].playerWords[[_turnOrderNums[_curTurn - 1] intValue]] = _enteredWord.text;
+    _enteredWord.text = @"";
     if(_curTurn == [_turnOrder count]){
         _nextScreen.hidden = FALSE;
         _submitWord.hidden = TRUE;
     } else {
         [self startTurn: _curTurn];
-    }
-}
-
-- (void)saveWord:(NSString*)word :(int)index{
-    switch(index){
-        case 1:
-            [Singleton sharedObject].playerNames[0] = word;
-            break;
-        case 2:
-            [Singleton sharedObject].playerNames[1] = word;
-            break;
-        case 3:
-            [Singleton sharedObject].playerNames[2] = word;
-            break;
-        case 4:
-            [Singleton sharedObject].playerNames[3] = word;
-            break;
-        case 5:
-            [Singleton sharedObject].playerNames[4] = word;
-            break;
-        case 6:
-            [Singleton sharedObject].playerNames[5] = word;
-            break;
     }
 }
 
@@ -96,7 +77,8 @@
     while(unrandomizedPlayers > 0){
         int chosenPlayer = arc4random_uniform(6);
         if(playersToPick[chosenPlayer] != -1){
-            [_turnOrder addObject:[Singleton sharedObject].playerNames[playersToPick[chosenPlayer]]];
+            [_turnOrder addObject:[Singleton sharedObject].playerNames[playersToPick[chosenPlayer] - 1]];
+            [_turnOrderNums addObject:[NSNumber numberWithInt:playersToPick[chosenPlayer] - 1]];
             playersToPick[chosenPlayer] = -1;
             unrandomizedPlayers--;
         }
