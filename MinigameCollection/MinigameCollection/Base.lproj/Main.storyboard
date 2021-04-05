@@ -651,15 +651,116 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4I-Hh-gCv">
+                                <rect key="frame" x="66" y="615" width="44" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Hit"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE7-RL-bhW">
+                                <rect key="frame" x="154" y="563" width="67" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Split"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta1-g0-Yn3">
+                                <rect key="frame" x="224" y="615" width="89" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Stand"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="nsi-VX-V3W">
+                                <rect key="frame" x="16" y="434" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="cmQ-Tu-P11">
+                                <rect key="frame" x="195" y="434" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fxh-Tk-jV1">
+                                <rect key="frame" x="292" y="434" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-uZ-g2B">
+                                <rect key="frame" x="16" y="305" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-La-suu">
+                                <rect key="frame" x="106" y="3" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-jQ-v8i">
+                                <rect key="frame" x="195" y="3" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uyv-8Y-rMZ">
+                                <rect key="frame" x="292" y="3" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="7sT-re-gAe">
+                                <rect key="frame" x="16" y="132" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="yme-se-Tpq">
+                                <rect key="frame" x="106" y="132" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="lh6-Dg-780">
+                                <rect key="frame" x="195" y="132" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="gv3-Jk-PHa">
+                                <rect key="frame" x="292" y="132" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="WS2-tx-beU">
+                                <rect key="frame" x="106" y="305" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="LPy-TB-Udj">
+                                <rect key="frame" x="195" y="305" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="KXw-RO-m10">
+                                <rect key="frame" x="292" y="305" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="lTC-U0-sML">
+                                <rect key="frame" x="106" y="434" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="2C.png" translatesAutoresizingMaskIntoConstraints="NO" id="El4-tR-XU1">
+                                <rect key="frame" x="16" y="3" width="67" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rQT-S0-r0q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <size key="freeformSize" width="375" height="860"/>
+                    <connections>
+                        <outlet property="opponentCard1" destination="7sT-re-gAe" id="zCA-Mm-c1t"/>
+                        <outlet property="opponentCard2" destination="yme-se-Tpq" id="Ecz-MR-9XK"/>
+                        <outlet property="opponentCard3" destination="lh6-Dg-780" id="wJY-Ur-bRf"/>
+                        <outlet property="opponentCard4" destination="gv3-Jk-PHa" id="JKh-se-VDY"/>
+                        <outlet property="opponentCard5" destination="El4-tR-XU1" id="E6s-xr-5Pb"/>
+                        <outlet property="opponentCard6" destination="sU2-La-suu" id="3LX-b3-iYS"/>
+                        <outlet property="opponentCard7" destination="XqI-jQ-v8i" id="kn7-LW-ldt"/>
+                        <outlet property="opponentCard8" destination="Uyv-8Y-rMZ" id="3kE-wL-v9M"/>
+                        <outlet property="playerCard1" destination="nsi-VX-V3W" id="HVk-Gm-Ojg"/>
+                        <outlet property="playerCard2" destination="lTC-U0-sML" id="lrF-jh-dbg"/>
+                        <outlet property="playerCard3" destination="cmQ-Tu-P11" id="3BO-UI-pR8"/>
+                        <outlet property="playerCard4" destination="Fxh-Tk-jV1" id="JFk-gf-c1W"/>
+                        <outlet property="playerCard5" destination="uiw-uZ-g2B" id="r5z-fZ-0W8"/>
+                        <outlet property="playerCard6" destination="WS2-tx-beU" id="wpj-jK-avE"/>
+                        <outlet property="playerCard7" destination="LPy-TB-Udj" id="1cm-7R-DjR"/>
+                        <outlet property="playerCard8" destination="KXw-RO-m10" id="oKX-GJ-86O"/>
+                        <outlet property="splitButton" destination="rE7-RL-bhW" id="Kc9-zB-RIt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ul4-hg-Pdm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="823"/>
+            <point key="canvasLocation" x="463.04347826086962" y="822.99107142857144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -667,6 +768,7 @@
         <segue reference="ADv-Sb-psx"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="2C.png" width="165.83999633789062" height="253.44000244140625"/>
         <image name="body.png" width="200" height="200"/>
         <image name="dash.png" width="200" height="200"/>
         <image name="hangmanBase (1).png" width="256" height="256"/>

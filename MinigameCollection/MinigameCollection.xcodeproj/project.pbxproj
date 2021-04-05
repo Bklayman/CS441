@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F37D7DC25E00B4D00848A33 /* dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F37D7DB25E00B4D00848A33 /* dash.png */; };
+		4F599688261B751D0094F1A3 /* PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4F599687261B751D0094F1A3 /* PNG */; };
 		4F73665725E9415600602C52 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F73665625E9415600602C52 /* Singleton.m */; };
 		4F73666025E9456200602C52 /* HangmanVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F73665F25E9456200602C52 /* HangmanVC2.m */; };
 		4FB135EF26166BF8005CB1FE /* Blackjack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB135EE26166BF8005CB1FE /* Blackjack.m */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		4F37D7DB25E00B4D00848A33 /* dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dash.png; path = ../../../../../../../../Downloads/dash.png; sourceTree = "<group>"; };
+		4F599687261B751D0094F1A3 /* PNG */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PNG; path = ../../../../../../../../Downloads/PNG; sourceTree = "<group>"; };
 		4F73665525E9414A00602C52 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		4F73665625E9415600602C52 /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		4F73665E25E9455300602C52 /* HangmanVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HangmanVC2.h; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				4FB609EA2608EA29009E258B /* head.png */,
 				4FB609EF2608EA60009E258B /* body.png */,
 				4FB609F42608EB16009E258B /* leftParts.png */,
+				4F599687261B751D0094F1A3 /* PNG */,
 				4FE4955D25DD60BC00228CEE /* Assets.xcassets */,
 				4FE4955F25DD60BC00228CEE /* LaunchScreen.storyboard */,
 				4FE4956225DD60BC00228CEE /* Info.plist */,
@@ -298,6 +301,7 @@
 				4FCFD05B2604EDED0024B067 /* rock.png in Resources */,
 				4FB609F52608EB16009E258B /* leftParts.png in Resources */,
 				4FCFD0602604EDF40024B067 /* paper.png in Resources */,
+				4F599688261B751D0094F1A3 /* PNG in Resources */,
 				4FE495A925DD6E1700228CEE /* wordlist.txt in Resources */,
 				4FB609F02608EA60009E258B /* body.png in Resources */,
 				4FE4955C25DD60BB00228CEE /* Main.storyboard in Resources */,

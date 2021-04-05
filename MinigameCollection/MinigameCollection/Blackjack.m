@@ -75,6 +75,32 @@
     [Singleton sharedObject].gameSource = 2;
 }
 
+- (NSString*)getCardImageLink:(Card*)card{
+    NSString* suitAdd = @"";
+    if([card.suit isEqualToString:@"Hearts"]){
+        suitAdd = @"H.png";
+    } else if([card.suit isEqualToString:@"Diamonds"]){
+        suitAdd = @"D.png";
+    } else if([card.suit isEqualToString:@"Spades"]){
+        suitAdd = @"S.png";
+    } else {
+        suitAdd = @"C.png";
+    }
+    NSString* valueAdd = @"";
+    if([card.value isEqualToString:@"2"] || [card.value isEqualToString:@"3"] || [card.value isEqualToString:@"4"] || [card.value isEqualToString:@"5"] || [card.value isEqualToString:@"6"] || [card.value isEqualToString:@"7"] || [card.value isEqualToString:@"8"] || [card.value isEqualToString:@"9"] || [card.value isEqualToString:@"10"]){
+        valueAdd = card.value;
+    } else if([card.value isEqualToString:@"Jack"]){
+        valueAdd = @"J";
+    } else if([card.value isEqualToString:@"Queen"]){
+        valueAdd = @"Q";
+    } else if([card.value isEqualToString:@"King"]){
+        valueAdd = @"K";
+    } else {
+        valueAdd = @"A";
+    }
+    return [NSString stringWithFormat:@"%@%@", valueAdd, suitAdd];
+}
+
 - (NSString*)getSuit:(int)index{
     switch(index){
         case 0:
