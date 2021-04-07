@@ -9,5 +9,13 @@
 
 @interface Leaderboard: UIViewController
 
+@property NSString* saveData;
+
+@property NSMutableArray* leaderboardData;
+@property NSMutableArray* leaderboardNames;
+@property NSMutableArray* leaderboardPoints;
+
+@property (nonatomic, strong) IBOutlet UITableView* leaderboardTable;
+
 @end
 
