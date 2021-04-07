@@ -742,7 +742,7 @@
                     </view>
                     <size key="freeformSize" width="340" height="875"/>
                     <connections>
-                        <outlet property="namesTable" destination="fjo-h9-V84" id="xut-V3-y97"/>
+                        <outlet property="leaderboardTable" destination="fjo-h9-V84" id="u3J-Wl-iS5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jq-1v-OGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

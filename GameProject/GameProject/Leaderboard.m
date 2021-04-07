@@ -23,8 +23,15 @@
     _leaderboardPoints = [[NSMutableArray alloc] init];
     [self getSaveData];
     [self addCurrentPlayers];
+    [self updateLeaderboardData];
     [_leaderboardTable reloadData];
     [self saveLeaderboard];
+}
+
+- (void)updateLeaderboardData{
+    for(int i = 0; i < [_leaderboardNames count]; i++){
+        _leaderboardData[i] = [NSString stringWithFormat:@"%@%@%d", _leaderboardNames[i], @": ", [_leaderboardPoints[i] intValue]];
+    }
 }
 
 - (nonnull UITableViewCell*)tableView:(nonnull UITableView*)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
@@ -38,8 +45,8 @@
 }
 
 - (void)addCurrentPlayers{
-    for(int i = 0; i < [[Singleton sharedObject].playerNames count]; i++){
-        if(i > 1 && ![Singleton sharedObject].playerExists[i - 2]){
+    for(int i = 0; i < 6; i++){
+        if(i > 1 && i < 6 && ![[Singleton sharedObject].playerExists[i - 2] boolValue]){
             continue;
         }
         bool nameExists = FALSE;
@@ -52,16 +59,18 @@
             }
         }
         if(nameExists){
-            _leaderboardPoints[nameFound] = [Singleton sharedObject].playerPoints[i];
-            [self moveToCorrectPosition:nameFound];
+            if([_leaderboardPoints[nameFound] intValue] < [[Singleton sharedObject].playerPoints[i] intValue]){
+                _leaderboardPoints[nameFound] = [Singleton sharedObject].playerPoints[i];
+                [self moveToCorrectPosition:nameFound];
+            }
         } else {
-            if(_leaderboardPoints[[_leaderboardPoints count] - 1] >= [Singleton sharedObject].playerPoints[i]){
-                break;
+            if([_leaderboardPoints[0] intValue] >= [[Singleton sharedObject].playerPoints[i] intValue]){
+                continue;
             }
             bool placed = FALSE;
             int placeAt = 0;
             for(int j = 1; j < [_leaderboardPoints count]; j++){
-                if([Singleton sharedObject].playerPoints[i] < _leaderboardPoints[j]){
+                if([[Singleton sharedObject].playerPoints[i] intValue] < [_leaderboardPoints[j] intValue]){
                     placeAt = j - 1;
                     placed = TRUE;
                     break;
@@ -75,14 +84,14 @@
 - (void)insertNewPoints:(int)leaderboardIndex :(int)playerIndex{
     NSString* playerName = [Singleton sharedObject].playerNames[playerIndex];
     NSNumber* playerPoints = [Singleton sharedObject].playerPoints[playerIndex];
-    while(leaderboardIndex < [_leaderboardNames count]){
+    while(leaderboardIndex >= 0){
         NSString* curLeaderboardName = _leaderboardNames[leaderboardIndex];
         NSNumber* curLeaderboardPoints = _leaderboardPoints[leaderboardIndex];
         _leaderboardNames[leaderboardIndex] = playerName;
         _leaderboardPoints[leaderboardIndex] = playerPoints;
         playerName = curLeaderboardName;
         playerPoints = curLeaderboardPoints;
-        leaderboardIndex++;
+        leaderboardIndex--;
     }
 }
 
@@ -104,10 +113,8 @@
 }
 
 - (void)createSaveDataString{
-    _saveData = [NSString stringWithFormat:@""];
-    for(int i = 0; i < [_leaderboardData count]; i++){
-        [_saveData stringByAppendingFormat:_leaderboardData[i]];
-    }
+    _saveData = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", _leaderboardData[0], @"102938", _leaderboardData[1], @"102938", _leaderboardData[2], @"102938", _leaderboardData[3], @"102938", _leaderboardData[4], @"102938", _leaderboardData[5], @"102938", _leaderboardData[6], @"102938", _leaderboardData[7], @"102938", _leaderboardData[8], @"102938", _leaderboardData[9], @"102938"];
+    NSLog(@"%@", _saveData);
 }
 
 - (void)getSaveData{
@@ -118,8 +125,8 @@
         int startingIndex = 0;
         for(int i = 0; i < 10; i++){
             NSRange foundRange = [_saveData rangeOfString:@"102938" options:NSCaseInsensitiveSearch range:NSMakeRange(startingIndex, _saveData.length - startingIndex)];
-            [_leaderboardData addObject:[_saveData substringWithRange:NSMakeRange(startingIndex, foundRange.location)]];
-            startingIndex = (int)foundRange.location + 1;
+            [_leaderboardData addObject:[_saveData substringWithRange:NSMakeRange(startingIndex, foundRange.location - startingIndex)]];
+            startingIndex = (int)foundRange.location + 6;
         }
     }
     [self formatSaveData];
@@ -129,11 +136,13 @@
     for(int i = 0; i < [_leaderboardData count]; i++){
         NSString* curDataString = _leaderboardData[i];
         unsigned long pointsFound = [curDataString rangeOfString:@": "].location;
-        while([curDataString rangeOfString:@": " options:NSCaseInsensitiveSearch range:NSMakeRange(pointsFound + 1, curDataString.length - pointsFound - 1)].location > 0){
+        unsigned long pointsToUse = pointsFound;
+        while((int)pointsFound != -1){
+            pointsToUse = pointsFound;
             pointsFound = [curDataString rangeOfString:@": " options:NSCaseInsensitiveSearch range:NSMakeRange(pointsFound + 1, curDataString.length - pointsFound - 1)].location;
         }
-        int curPoints = [[curDataString substringWithRange:NSMakeRange(pointsFound + 2, curDataString.length - pointsFound - 2)] intValue];
-        NSString* curName = [curDataString substringWithRange:NSMakeRange(0, pointsFound)];
+        int curPoints = [[curDataString substringWithRange:NSMakeRange(pointsToUse + 2, curDataString.length - pointsToUse - 2)] intValue];
+        NSString* curName = [curDataString substringWithRange:NSMakeRange(0, pointsToUse)];
         [_leaderboardPoints addObject:[NSNumber numberWithInt:curPoints]];
         [_leaderboardNames addObject:curName];
     }
