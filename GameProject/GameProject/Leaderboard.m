@@ -114,7 +114,6 @@
 
 - (void)createSaveDataString{
     _saveData = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", _leaderboardData[0], @"102938", _leaderboardData[1], @"102938", _leaderboardData[2], @"102938", _leaderboardData[3], @"102938", _leaderboardData[4], @"102938", _leaderboardData[5], @"102938", _leaderboardData[6], @"102938", _leaderboardData[7], @"102938", _leaderboardData[8], @"102938", _leaderboardData[9], @"102938"];
-    NSLog(@"%@", _saveData);
 }
 
 - (void)getSaveData{
