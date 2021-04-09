@@ -192,11 +192,7 @@
             }
             break;
         } else {
-            if([curValueName isEqualToString:@"King"] || [curValueName isEqualToString:@"Queen"] || [curValueName isEqualToString:@"Jack"]){
-                curValue+= 10;
-            } else {
-                curValue+= [curValueName intValue];
-            }
+            curValue+= [hand[curValue] getValueInt:curValueName];
         }
         curIndex++;
     }
@@ -211,6 +207,58 @@
 
 - (NSMutableArray*)getHandValue:(NSMutableArray*)hand{
     return [self handValueHelper:0 :hand :0];
+}
+
+- (Card*)drawCard:(NSMutableArray**)deck{
+    if([*deck count] == 0){
+        *deck = [self shuffleDeckRandom:[self createDeck]];
+    }
+    Card* drawenCard = (*deck)[0];
+    [*deck removeObjectAtIndex:0];
+    return drawenCard;
+}
+
+- (UIImageView*)getImageView:(int)index{
+    switch(index){
+        case 0:
+            return _playerCard1;
+        case 1:
+            return _playerCard2;
+        case 2:
+            return _playerCard3;
+        case 3:
+            return _playerCard4;
+        case 4:
+            return _playerCard5;
+        case 5:
+            return _playerCard6;
+        case 6:
+            return _playerCard7;
+        case 7:
+            return _playerCard8;
+        case 8:
+            return _opponentCard1;
+        case 9:
+            return _opponentCard2;
+        case 10:
+            return _opponentCard3;
+        case 11:
+            return _opponentCard4;
+        case 12:
+            return _opponentCard5;
+        case 13:
+            return _opponentCard6;
+        case 14:
+            return _opponentCard7;
+        case 15:
+            return _opponentCard8;
+        default:
+            return NULL;
+    }
+}
+
+- (void)setCardImage:(int)imageIndex :(NSString*)link{
+    [self getImageView:imageIndex].image = [UIImage imageNamed:link];
 }
 
 @end
