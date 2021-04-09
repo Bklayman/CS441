@@ -176,11 +176,35 @@
     return deck;
 }
 
-- (NSMutableArray*)handValueHelper:(int)curValue :(NSMutableArray*)hand :(int)curIndex{
+- (NSMutableArray*)handValueHelper:(int)curValue :(NSMutableArray*)hand :(int)curIndex{//Returns array of point totals
     NSMutableArray* result = [[NSMutableArray alloc] init];
     while(curIndex < [hand count]){
-        //TODO
+        Card* curCard = hand[curIndex];
+        NSString* curValueName = curCard.value;
+        if([curValueName isEqualToString:@"Ace"]){
+            NSMutableArray* add1 = [self handValueHelper:(curValue + 1) :hand :(curIndex + 1)];
+            NSMutableArray* add11 = [self handValueHelper:(curValue + 11) :hand :(curIndex + 1)];
+            for(int i = 0; i < [add1 count]; i++){
+                [result addObject:add1[i]];
+            }
+            for(int i = 0; i < [add11 count]; i++){
+                [result addObject:add11[i]];
+            }
+            break;
+        } else {
+            if([curValueName isEqualToString:@"King"] || [curValueName isEqualToString:@"Queen"] || [curValueName isEqualToString:@"Jack"]){
+                curValue+= 10;
+            } else {
+                curValue+= [curValueName intValue];
+            }
+        }
         curIndex++;
+    }
+    for(int i = 0; i < [result count]; i++){
+        if([result[i] intValue] > 21){
+            [result removeObjectAtIndex:i];
+            i--;
+        }
     }
     return result;
 }
