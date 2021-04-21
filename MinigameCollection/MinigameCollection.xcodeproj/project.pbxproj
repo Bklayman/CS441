@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2ECB22263073C300FD72A7 /* Tic-tac-toe.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F2ECB21263073C300FD72A7 /* Tic-tac-toe.png */; };
+		4F2ECB272630755F00FD72A7 /* TicTacToe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2ECB262630755F00FD72A7 /* TicTacToe.m */; };
 		4F37D7DC25E00B4D00848A33 /* dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F37D7DB25E00B4D00848A33 /* dash.png */; };
 		4F599688261B751D0094F1A3 /* PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4F599687261B751D0094F1A3 /* PNG */; };
 		4F73665725E9415600602C52 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F73665625E9415600602C52 /* Singleton.m */; };
@@ -51,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F2ECB21263073C300FD72A7 /* Tic-tac-toe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tic-tac-toe.png"; path = "../../../../../../../../Downloads/Tic-tac-toe.png"; sourceTree = "<group>"; };
+		4F2ECB262630755F00FD72A7 /* TicTacToe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToe.m; sourceTree = "<group>"; };
+		4F2ECB2B2630756800FD72A7 /* TicTacToe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicTacToe.h; sourceTree = "<group>"; };
 		4F37D7DB25E00B4D00848A33 /* dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dash.png; path = ../../../../../../../../Downloads/dash.png; sourceTree = "<group>"; };
 		4F599687261B751D0094F1A3 /* PNG */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PNG; path = ../../../../../../../../Downloads/PNG; sourceTree = "<group>"; };
 		4F73665525E9414A00602C52 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -149,6 +154,8 @@
 				4FE4955825DD60BB00228CEE /* ViewController.m */,
 				4FE4955725DD60BB00228CEE /* ViewController.h */,
 				4FE4955A25DD60BB00228CEE /* Main.storyboard */,
+				4F2ECB262630755F00FD72A7 /* TicTacToe.m */,
+				4F2ECB2B2630756800FD72A7 /* TicTacToe.h */,
 				4FB135F426166DE5005CB1FE /* Instructions.m */,
 				4FB135FC26166DEF005CB1FE /* Instructions.h */,
 				4FB135EE26166BF8005CB1FE /* Blackjack.m */,
@@ -165,6 +172,7 @@
 				4FB609EA2608EA29009E258B /* head.png */,
 				4FB609EF2608EA60009E258B /* body.png */,
 				4FB609F42608EB16009E258B /* leftParts.png */,
+				4F2ECB21263073C300FD72A7 /* Tic-tac-toe.png */,
 				4F599687261B751D0094F1A3 /* PNG */,
 				4FE4955D25DD60BC00228CEE /* Assets.xcassets */,
 				4FE4955F25DD60BC00228CEE /* LaunchScreen.storyboard */,
@@ -304,6 +312,7 @@
 				4F599688261B751D0094F1A3 /* PNG in Resources */,
 				4FE495A925DD6E1700228CEE /* wordlist.txt in Resources */,
 				4FB609F02608EA60009E258B /* body.png in Resources */,
+				4F2ECB22263073C300FD72A7 /* Tic-tac-toe.png in Resources */,
 				4FE4955C25DD60BB00228CEE /* Main.storyboard in Resources */,
 				4F37D7DC25E00B4D00848A33 /* dash.png in Resources */,
 				4FCFD0652604EDFA0024B067 /* scissors.png in Resources */,
@@ -331,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2ECB272630755F00FD72A7 /* TicTacToe.m in Sources */,
 				4FE4955925DD60BB00228CEE /* ViewController.m in Sources */,
 				4FE4955325DD60BB00228CEE /* AppDelegate.m in Sources */,
 				4FE4956425DD60BC00228CEE /* main.m in Sources */,
